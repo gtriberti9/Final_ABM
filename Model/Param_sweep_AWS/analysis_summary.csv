@@ -1,0 +1,6 @@
+,final_inflation,final_inflation,final_inflation,final_inflation,final_policy_rate,final_policy_rate,credit_access_gap,credit_access_gap,total_production,total_production,converged,converged
+,mean,std,min,max,mean,std,mean,std,mean,std,mean,count
+informality_rate,,,,,,,,,,,,
+0.1,0.0147,0.0015,0.0123,0.0163,0.0282,0.001,0.5493,0.0071,1701.3801,90.6633,0.0,5
+0.3,0.0137,0.0026,0.0104,0.0175,0.0268,0.0018,0.5382,0.0047,1536.0928,92.9201,0.0,5
+0.5,0.0149,0.0012,0.0139,0.0168,0.0272,0.0009,0.534,0.0152,1307.4385,104.8279,0.0,5
