@@ -42,9 +42,9 @@ Visualization_solara/
 cd Visualization_solara
 ```
 
-2. Install required dependencies:
+2. Install required dependencies only if they are not in the environment:
 ```bash
-pip install mesa numpy pandas matplotlib scipy
+pip install mesa=3.1.4 numpy pandas matplotlib scipy
 ```
 
 Required packages include:
@@ -58,7 +58,7 @@ Required packages include:
 ### Main Analysis Tool
 Run the complete analysis with visualization:
 ```bash
-python app.py
+solara run app.py
 ```
 
 This will execute:
