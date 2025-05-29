@@ -264,7 +264,7 @@ if __name__ == "__main__":
         'max_steps': 200,
         'inflation_target': 0.02,
         'initial_policy_rate': 0.03,
-        'current_inflation': 0.02
+        'current_inflation': 0.12
     }
     
     # Initialize runner

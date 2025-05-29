@@ -16,7 +16,7 @@ def create_test_config():
         with open('aws_sweep_config.json', 'r') as f:
             base_config = json.load(f)
     else:
-        print("❌ AWS configuration not found. Please run aws_setup_script.py first.")
+        print("AWS configuration not found. Please run aws_setup_script.py first.")
         return None
     
     # Create minimal test configuration
@@ -72,10 +72,10 @@ def run_aws_test():
         
         # Validate configuration
         if not validate_config(config):
-            print("❌ Test configuration validation failed")
+            print("Test configuration validation failed")
             return False
         
-        print("\n📋 Test Configuration:")
+        print("\n Test Configuration:")
         print(f"- Mode: {config['mode']}")
         print(f"- Simulations: {len(config['informality_rates']) * len(config['seeds'])}")
         print(f"- AWS Region: {config['aws_config']['region_name']}")
@@ -84,12 +84,12 @@ def run_aws_test():
         
         # Confirm test run
         if not config['aws_config'].get('auto_confirm', False):
-            confirm = input("\n🚀 Run AWS test deployment? (y/n): ").lower().strip()
+            confirm = input("\n Run AWS test deployment? (y/n): ").lower().strip()
             if confirm != 'y':
                 print("Test cancelled.")
                 return False
         
-        print("\n🚀 Starting AWS test deployment...")
+        print("\n Starting AWS test deployment...")
         
         # Run AWS sweep
         results = run_aws_sweep(config)
@@ -112,9 +112,9 @@ def main():
     # Check prerequisites
     try:
         import boto3
-        print("✅ boto3 available")
-    except ImportError:
-        print("❌ boto3 not installed. Run: pip install boto3")
+        print("boto3 available")
+    except ImprtError:
+        print("boto3 not installed. Run: pip install boto3")
         return
     
     # Check AWS credentials
@@ -122,9 +122,9 @@ def main():
         import boto3
         sts = boto3.client('sts')
         identity = sts.get_caller_identity()
-        print(f"✅ AWS credentials valid. Account: {identity.get('Account')}")
+        print(f"AWS credentials valid. Account: {identity.get('Account')}")
     except Exception as e:
-        print(f"❌ AWS credentials issue: {str(e)}")
+        print(f"AWS credentials issue: {str(e)}")
         print("Please run: aws configure")
         return
     
@@ -132,11 +132,11 @@ def main():
     success = run_aws_test()
     
     if success:
-        print("\n🎉 Test completed successfully!")
+        print("\nTest completed successfully!")
         print("\nNext steps:")
         print("1. Check your S3 bucket for results")
         print("2. If satisfied, run full deployment:")
-        print("   python main_runner.py --config aws_sweep_config.json")
+        print("   python main_runner.py --config sweep_config.json")
     else:
         print("\n❌ Test failed. Please check error messages and try again.")
 

@@ -325,7 +325,7 @@ def main():
             print(f"python main_runner.py --config aws_sweep_config.json")
             
             # Estimate costs
-            print(f"\n💰 Estimated Cost for Full Sweep (800 simulations):")
+            print(f"\n Estimated Cost for Full Sweep (800 simulations):")
             print(f"- Instance Type: c5.2xlarge ($0.34/hour)")
             print(f"- Number of Instances: 4") 
             print(f"- Estimated Runtime: 3 hours")
