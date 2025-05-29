@@ -61,17 +61,26 @@ Run the complete analysis with visualization:
 solara run app.py
 ```
 
-This will execute:
-- **Single Scenario Simulations**: Detailed analysis of low and high informality scenarios
-- **Parameter Sweep Analysis**: Systematic exploration across different informality rates
-- **Comparative Visualizations**: Plots showing relationships between informality and policy effectiveness
-- **Statistical Analysis**: Summary statistics and convergence metrics
+## Dashboard Features
 
-### Key Output Features
-- **Macroeconomic Time Series**: Inflation, policy rates, and output gaps over time
-- **Banking Sector Analysis**: Credit flows and interest rate differentials
-- **Agent Distribution Analysis**: Wealth, pricing, and credit access patterns
-- **Parameter Sensitivity**: How outcomes vary across informality levels
+### Visualization Output
+- **Macroeconomic Indicators**: Inflation, policy rate, output gap trajectories
+- **Banking Sector Dynamics**: Credit flows, interest rate spreads by sector  
+- **Agent Distributions**: Wealth, prices, and credit access by formality status
+- **Informality Indicators**: Figures of nformality and credit gap
+
+### Parameter sweep
+
+1. Navigate to the `Param_sweep_AWS` folder:
+```bash
+cd Param_sweep_AWS
+```
+
+2. Run:
+```bash
+python main_runner.py --quick-test
+python simple_analysis.py
+```
 
 ## Key Model Parameters
 
@@ -88,29 +97,9 @@ This will execute:
 - **Natural Interest Rate**: Long-term equilibrium rate (6.42% for Peru)
 
 ### Initial Conditions
-- **Initial Inflation Shock**: Starting inflation rate (8.81% - Peru post-COVID peak)
+- **Initial Inflation Shock**: Starting inflation rate (12% - Peru post-COVID peak)
 - **Simulation Length**: Maximum time steps (200 periods)
-- **Convergence Criteria**: Inflation within ±1pp of target for 36 consecutive periods
 
-## Dashboard Features
-
-### Analysis Capabilities
-The `app.py` script provides comprehensive analysis tools:
-- **Scenario Comparison**: Direct comparison between low and high informality economies
-- **Parameter Sensitivity Analysis**: Systematic exploration of key parameter relationships
-- **Convergence Analysis**: Time-to-target metrics and policy effectiveness measures
-- **Statistical Validation**: Robustness checks and confidence intervals
-
-### Visualization Output
-- **Macroeconomic Indicators**: Inflation, policy rate, output gap trajectories
-- **Banking Sector Dynamics**: Credit flows, interest rate spreads by sector  
-- **Agent Distributions**: Wealth, prices, and credit access by formality status
-- **Parameter Sweep Results**: Relationships between informality and policy outcomes
-
-### Data Export
-- Simulation results automatically saved for further analysis
-- Publication-ready plots generated in high resolution
-- Statistical summaries exported for reporting
 
 ## Key Research Questions
 
@@ -127,48 +116,10 @@ The model is calibrated using Peruvian economic data:
 - Central bank parameters from Banco Central de Reserva del Perú
 - Post-pandemic inflation shock magnitude (8.81% peak)
 
-## Expected Results
-
-Based on our research findings:
-- **U-shaped Relationship**: Moderate informality (≈30%) may not severely impair policy effectiveness
-- **Extended Adjustment**: High informality economies require longer convergence times
-- **Credit Adaptation**: Banks adjust portfolios to serve informal markets as informality increases
-- **Non-linear Effects**: Policy effectiveness varies non-monotonically with informality levels
-
-## Extending the Model
-
-Potential enhancements for future research:
-- **Multi-market Equilibrium**: Endogenous labor and production markets
-- **Institutional Heterogeneity**: Different regulatory frameworks across countries
-- **Dynamic Informality**: Allow informality rates to respond to policy changes
-- **Spatial Components**: Urban/rural or regional heterogeneity
-- **Financial Sector Details**: Explicit modeling of bank balance sheets and capital requirements
-
-## Technical Notes
-
-### Performance Optimization
-- Vectorized operations using NumPy for computational efficiency
-- Configurable agent populations to balance realism and speed
-- Parallel processing capabilities for parameter sweeps
-
 ### Reproducibility
 - Fixed random seeds for consistent results
 - Parameter logging for experiment replication
 - Version control integration for model tracking
-
-## Troubleshooting
-
-### Common Issues
-- **Slow Performance**: Reduce agent population in `model.py` or simulation length
-- **Import Errors**: Ensure all required packages are installed (`pip install mesa numpy pandas matplotlib scipy`)
-- **Memory Issues**: Close other applications or reduce parameter sweep ranges
-- **Plot Display Issues**: Check matplotlib backend configuration
-
-### Modifying Parameters
-To adjust model parameters, edit the relevant values in:
-- `agents.py`: Agent-specific parameters (risk premiums, behavioral rules)
-- `model.py`: Model-wide parameters (agent populations, simulation length)
-- `app.py`: Analysis parameters (informality rates to test, number of runs)
 
 ### Performance Tips
 - Start with smaller agent populations for testing
@@ -183,12 +134,8 @@ Triberti, G. (2025). Exploring the Role of Agent-Based Models in Inflation Targe
 Masters in Computational Social Sciences, University of Chicago.
 ```
 
-## License
-
-This project is developed for academic research purposes. Please contact the author for usage permissions and collaboration opportunities.
-
 ---
 
 **Author**: Giuliana Triberti  
 **Institution**: University of Chicago - Masters in Computational Social Sciences  
-**GitHub**: https://github.com/gtriberti9/ABM/tree/main/Midterm_2
+**GitHub**: https://github.com/gtriberti9/Final_ABM/edit/main/Model/Visualization_solara
