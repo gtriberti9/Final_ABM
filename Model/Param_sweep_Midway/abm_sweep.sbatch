@@ -10,7 +10,7 @@
 #SBATCH --partition=caslake
 #SBATCH --account=macs30123
 
-# Load required modules
+# Load required modules - Use Python 3.9 for Mesa 3.1.4 compatibility
 module load python/anaconda-2022.05
 
 # Set Python path

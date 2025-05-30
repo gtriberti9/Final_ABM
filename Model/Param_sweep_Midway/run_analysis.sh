@@ -13,9 +13,19 @@
 # Load required modules
 module load python/anaconda-2022.05
 
-# Activate conda environment
-source ~/anaconda3/etc/profile.d/conda.sh
-conda activate abm_env
+# Initialize conda properly
+CONDA_SH=$(find /software -name "conda.sh" 2>/dev/null | head -n 1)
+if [ -z "$CONDA_SH" ]; then
+    CONDA_SH="/software/python-anaconda-2022.05-el8-x86_64/etc/profile.d/conda.sh"
+fi
+
+if [ -f "$CONDA_SH" ]; then
+    source "$CONDA_SH"
+    conda activate abm_env
+else
+    echo "WARNING: Could not find conda.sh, using module python directly"
+    # If conda environment isn't available, just use the module python
+fi
 
 # Set Python path
 export PYTHONPATH="${PYTHONPATH}:${PWD}"

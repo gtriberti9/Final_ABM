@@ -26,15 +26,32 @@ mkdir -p {results,analysis_results,logs}
 echo "Loading modules and environment..."
 module load python/anaconda-2022.05
 
+# Initialize conda (find the correct conda.sh location)
+CONDA_SH=$(find /software -name "conda.sh" 2>/dev/null | head -n 1)
+if [ -z "$CONDA_SH" ]; then
+    # Try alternative locations
+    CONDA_SH="/software/python-anaconda-2022.05-el8-x86_64/etc/profile.d/conda.sh"
+fi
+
+if [ -f "$CONDA_SH" ]; then
+    echo "Found conda.sh at: $CONDA_SH"
+    source "$CONDA_SH"
+else
+    echo "WARNING: Could not find conda.sh, trying direct conda commands..."
+fi
+
 # Check if conda environment exists
 if conda info --envs | grep -q "abm_env"; then
     echo "Activating existing abm_env environment..."
-    source ~/anaconda3/etc/profile.d/conda.sh
     conda activate abm_env
 else
     echo "ERROR: abm_env conda environment not found"
     echo "Please run the setup script first:"
     echo "  bash setup_midway.sh"
+    echo ""
+    echo "Or create environment manually:"
+    echo "  conda create -n abm_env python=3.9 numpy pandas matplotlib seaborn scipy -y"
+    echo "  conda activate abm_env"
     exit 1
 fi
 
