@@ -10,7 +10,7 @@
 #SBATCH --partition=caslake
 #SBATCH --account=macs30123
 
-# Load required modules
+# Load required modules - Use Python 3.9 and Spark
 module load python/anaconda-2022.05 spark/3.3.2
 
 # Set Python and Spark environment
