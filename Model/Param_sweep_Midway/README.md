@@ -14,9 +14,7 @@ The informal sector introduces several layers of heterogeneity that traditional 
 
 1. **Credit Access Heterogeneity**: Formal firms and workers have access to bank credit and formal financial services, while informal agents rely on alternative financing mechanisms with different interest rate sensitivities.
 
-2. **Price Setting Behavior**: Informal firms often exhibit different price stickiness and inflation expectations formation compared to formal enterprises.
-
-3. **Policy Transmission Channels**: Monetary policy affects formal and informal sectors through different channels—the traditional bank lending channel versus informal credit markets and cash-based transactions.
+2. **Policy Transmission Channels**: Monetary policy affects formal and informal sectors through different channels—the traditional bank lending channel versus informal credit markets and cash-based transactions.
 
 4. **Regulatory Environment**: Informal agents face different regulatory constraints, tax obligations, and reporting requirements that affect their economic behavior.
 
@@ -111,34 +109,7 @@ Our ABM implementation leverages Python's multiprocessing capabilities to achiev
 
 **Scalability Achievement**: Our benchmarks demonstrate 15.3x speedup using 20 cores, achieving 27.7 simulations per second compared to 1.7 simulations per second on a single core—a **1,530% performance improvement**.
 
-### 2. Multi-Format Scalable Data Storage
-
-**CSV Storage Limitations and Alternative Exploration**:
-Our initial implementation used CSV files as the standard output format, which is adequate for hundreds of simulations but reveals significant limitations at scale:
-
-- **Performance Bottlenecks**: CSV writing becomes increasingly slow with larger datasets (15.9 MB/s write speed)
-- **Storage Inefficiency**: Text-based format results in large file sizes (111 MB for 1M rows)
-- **Memory Overhead**: Loading large CSV files requires substantial RAM
-- **No Built-in Compression**: Leads to excessive disk usage in large-scale studies
-
-**Exploring Alternative Storage Solutions**:
-Given the computational gains achieved through parallelization across cores, we recognized an opportunity to explore more efficient storage options. *Note: This exploration of advanced storage formats represents an additional investigation beyond the core research requirements, undertaken to understand modern data management approaches for large-scale social science computing.*
-
-**Evaluated Storage Formats**:
-- **Parquet**: Columnar format with 243 MB/s write speed and 5.1x compression ratio
-- **HDF5**: Hierarchical data format optimized for time series with 3.7x compression  
-- **Feather**: Ultra-fast DataFrame I/O with 1,219 MB/s write speed
-- **Pickle**: Full Python object serialization for complex data structures
-
-**Performance Comparison Results**:
-For million-row datasets, alternative formats demonstrate substantial improvements over CSV:
-- Parquet: 15x faster writes, 5x smaller files, 5x faster reads
-- Feather: 77x faster writes, 3x faster reads
-- HDF5: Hierarchical organization ideal for time series data
-
-This storage format exploration, while not essential to the core monetary policy research, provides valuable insights into scalable data management for future large-scale ABM studies.
-
-### 3. Distributed Analysis with Apache Spark
+### 2. Distributed Analysis with Apache Spark
 
 Large-scale parameter sweep results require distributed processing capabilities. Our Spark implementation provides:
 
@@ -149,7 +120,7 @@ Large-scale parameter sweep results require distributed processing capabilities.
 
 The Spark analysis framework processes 800 simulations with 40+ variables each, computing aggregate statistics, correlation matrices, and regime analysis across informality levels.
 
-### 4. Performance Benchmarking Infrastructure
+### 3. Performance Benchmarking Infrastructure
 
 To demonstrate scalability, we developed comprehensive benchmarking tools that measure:
 
@@ -260,6 +231,7 @@ Beyond substantive findings, this research demonstrates the feasibility of large
 3. **Scalability Benchmarking**:
    ```bash
    sbatch benchmark_scalability.sbatch
+   python param_sweep_scalable.py
    # Tests performance across 1-20 cores
    # Benchmarks storage formats up to 1M rows
    # Generates comprehensive performance analysis
@@ -295,29 +267,14 @@ benchmarks/               # Performance analysis
 └── storage_benchmark_*.json     # Format performance comparison
 ```
 
-### Key Generated Visualizations
+## Conclusion
 
-The pipeline generates several critical visualizations:
+This research demonstrates that Agent-Based Modeling, when coupled with scalable computing infrastructure, can provide new insights into complex policy questions that traditional models cannot address. By achieving 15x computational speedup and implementing efficient data management systems, we enable rigorous analysis of monetary policy in dual formal-informal economies—a critical challenge for modern central banking in developing countries.
 
-1. **Main Analysis Dashboard** (`abm_analysis_main_*.png`): 9-panel comprehensive view showing convergence rates, inflation control, volatility patterns, credit access gaps, sectoral production shares, policy effectiveness, economic stability, and convergence timing across informality levels.
+The finding that informality reduces monetary policy effectiveness by up to 11 percentage points has immediate policy relevance for central banks operating in emerging economies. More broadly, our scalable ABM framework provides a template for computationally intensive social science research that can handle the complexity of real-world economic systems.
 
-2. **Correlation Matrix** (`correlation_matrix_*.png`): Heatmap revealing relationships between informality rates, economic outcomes, and policy effectiveness measures.
 
-3. **Distribution Analysis** (`distributions_*.png`): Histograms comparing economic indicator distributions across low, medium, and high informality regimes.
-
-4. **Economic Relationships** (`key_metrics_analysis_*.png`): Line plots showing detailed relationships between informality and key economic metrics.
-
-5. **Scalability Performance** (`scalability_analysis_*.png`): Comprehensive benchmarking results showing computational speedup, parallel efficiency, and storage format comparisons.
-
-## Limitations and Additional Explorations
-
-### Core Research Limitations
-
-1. **Model Scope**: The ABM focuses on monetary policy transmission and does not capture fiscal policy interactions or international trade effects that may be important in informal economies.
-
-2. **Agent Complexity**: While our agents exhibit heterogeneous behaviors, they operate under bounded rationality assumptions that may not fully capture the complexity of real-world decision-making in informal sectors.
-
-3. **Calibration Constraints**: The model parameters are stylized rather than calibrated to specific countries, limiting direct policy applicability without further validation.
+## Appendix
 
 ### Platform Implementation Challenges
 
@@ -331,30 +288,54 @@ Due to these implementation difficulties, the project was successfully completed
 
 ### Storage Technology Exploration (Additional Investigation)
 
-**Acknowledging CSV Limitations**: Our standard approach used CSV file output, which is appropriate for the scale of this research (800 simulations). However, recognizing that CSV has inherent limitations for larger-scale studies, we conducted an additional exploration of modern storage technologies.
+**CSV Storage Limitations and Alternative Exploration**:
+Our initial implementation used CSV files as the standard output format, which is adequate for hundreds of simulations but reveals significant limitations at scale:
 
-**Why This Exploration Was Undertaken**: Since we had successfully achieved computational scalability through parallelization across CPU cores, we wanted to understand what storage bottlenecks might emerge in future large-scale ABM research. *This storage format investigation represents an extra component beyond the core research requirements—undertaken primarily for learning purposes and to understand state-of-the-art data management approaches in computational social science.*
+- **Performance Bottlenecks**: CSV writing becomes increasingly slow with larger datasets (15.9 MB/s write speed)
+- **Storage Inefficiency**: Text-based format results in large file sizes (111 MB for 1M rows)
+- **Memory Overhead**: Loading large CSV files requires substantial RAM
+- **No Built-in Compression**: Leads to excessive disk usage in large-scale studies
 
-**Storage Format Learning Exercise**: We benchmarked alternative formats including Parquet, HDF5, and Feather to understand:
-- How storage performance scales with dataset size
-- Trade-offs between compression, speed, and compatibility
-- When CSV limitations become prohibitive for social science research
+**Exploring Alternative Storage Solutions**:
+Given the computational gains achieved through parallelization across cores, we recognized an opportunity to explore more efficient storage options. *Note: This exploration of advanced storage formats represents an additional investigation beyond the core research requirements, undertaken to understand modern data management approaches for large-scale social science computing.*
 
-**Key Learning**: While CSV suffices for our current study, format choice becomes critical when scaling to thousands of simulations or million+ row datasets. Parquet, for instance, provides 15x faster writes and 5x compression—knowledge that could benefit future large-scale ABM research.
+**Evaluated Storage Formats**:
+- **Parquet**: Columnar format with 243 MB/s write speed and 5.1x compression ratio
+- **HDF5**: Hierarchical data format optimized for time series with 3.7x compression  
+- **Feather**: Ultra-fast DataFrame I/O with 1,219 MB/s write speed
+- **Pickle**: Full Python object serialization for complex data structures
 
-**Transparency Note**: This storage exploration, while informative, was not necessary for our core monetary policy findings and represents additional technical investigation rather than a requirement of the research design.
+**Performance Comparison Results**:
+For million-row datasets, alternative formats demonstrate substantial improvements over CSV:
+- Parquet: 15x faster writes, 5x smaller files, 5x faster reads
+- Feather: 77x faster writes, 3x faster reads
+- HDF5: Hierarchical organization ideal for time series data
 
-This scalable ABM framework opens several avenues for future research:
+This storage format exploration, while not essential to the core monetary policy research, provides valuable insights into scalable data management for future large-scale ABM studies.
 
-1. **Cross-Country Analysis**: Extend to comparative studies across different institutional environments
-2. **Dynamic Informality**: Model endogenous transitions between formal and informal sectors
-3. **Financial Innovation**: Incorporate mobile money and fintech adoption in informal economies
-4. **Climate Economics**: Adapt framework for climate policy analysis in heterogeneous economies
+## Usage of AI
 
-The demonstrated scalability from hundreds to thousands of simulations, combined with distributed processing capabilities, enables researchers to tackle previously intractable questions in monetary economics, development economics, and policy analysis.
+Claude AI provided comprehensive assistance in:
 
-## Conclusion
+1. Converting the original Mesa-dependent ABM model to a standalone Python implementation to resolve compatibility issues. 
 
-This research demonstrates that Agent-Based Modeling, when coupled with scalable computing infrastructure, can provide new insights into complex policy questions that traditional models cannot address. By achieving 15x computational speedup and implementing efficient data management systems, we enable rigorous analysis of monetary policy in dual formal-informal economies—a critical challenge for modern central banking in developing countries.
+2. Claude generated comprehensive visualization tools generating 9-panel analysis dashboards and an automated visual report. 
 
-The finding that informality reduces monetary policy effectiveness by up to 11 percentage points has immediate policy relevance for central banks operating in emerging economies. More broadly, our scalable ABM framework provides a template for computationally intensive social science research that can handle the complexity of real-world economic systems.
+3. Additional improvements included enhanced error handling and debugging features with progress tracking and detailed logging. 
+
+## References
+
+Alberola, E., & Urrutia, C. (2020). Does informality facilitate inflation stability? Journal of Development Economics, 146, 102505. https://doi.org/10.1016/j.jdeveco.2020.102505
+Brandao-Marques, L., Gelos, G., Harjes, T., Sahay, R., & Xue, Y. (2020, February). Monetary policy transmission in emerging markets and developing economies (IMF Working Paper No. WP/20/35) (Monetary and Capital Markets Department). International Monetary Fund. https://www.imf.org/en/Publications/WP/Issues/2020/02/07/Monetary-Policy-Transmission-in-Emerging-Markets-and-Developing-Economies-48944
+CEIC Data. (2025). Peru long-term interest rate [Accessed: 2025-05-10].
+Central Reserve Bank of Peru (BCRP). (2025). Frequently asked questions — inflation targeting [Accessed: 2025-05-10].
+Gatti, D. D., Guilmi, C. D., Gaffeo, E., Giulioni, G., Gallegati, M., & Palestrini, A. (2005). A new approach to business fluctuations: Heterogeneous interacting agents, scaling laws and financial fragility. Journal of Economic Behavior & Organization, 56(4), 489–512. https://doi.org/10.1016/j.jebo.2003.10.012
+Hofmann, B., & Bogdanova, B. (2017, December). Taylor rules and monetary policy: A global "great deviation"? (BIS Working Paper No. 688) (BIS Working Papers). Bank for International Settlements. https://www.bis.org/publ/work688.htm
+Mishra, P., Montiel, P. J., & Spilimbergo, A. (2012). Monetary transmission in low-income countries: Effectiveness and policy implications. IMF Economic Review, 60(2), 270–302. https://doi.org/10.1057/imfer.2012.7
+Oanh, T. T. K., Van, L. T. T., & Dinh, L. Q. (2023). Relationship between financial inclusion, monetary policy and financial stability: An analysis in high financial development and low financial development countries. Heliyon, 9(6), e16647. https://doi.org/10.1016/j.heliyon.2023.e16647
+Ohnsorge, F., & Yu, S. (2022, March 1). The long shadow of informality: Challenges and policies [Google-Books-ID: qHZiEAAAQBAJ]. World Bank Publications.
+Poledna, S., Miess, M. G., Hommes, C., & Rabitsch, K. (2023). Economic forecasting with an agent-based model. European Economic Review, 151, 104306. https://doi.org/10.1016/j.euroecorev.2022.104306
+Raberto, M., Teglio, A., & Cincotti, S. (2008). Integrating real and financial markets in an agent based economic model: An application to monetary policy design. Computational Economics, 32(1), 147–162. https://doi.org/10.1007/s10614-008-9138-2
+Silva, E. M., Moura, G., & Silva, S. D. (2021). Monetary policy experiments in an agent-based macroeconomic model. OALib, 08(5), 1–14. https://doi.org/10.4236/oalib.1107471
+Singer, D., Demirguc-Kunt, A., Klapper, L., & Singer, D. (2017, April). Financial inclusion and inclusive growth: A review of recent empirical evidence. World Bank, Washington, DC. https://doi.org/10.1596/1813-9450-8040
+Turrell, A. (2016). Agent-based models: Understanding the economy from the bottom up. Quarterly Bulletin.
