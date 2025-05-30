@@ -1,0 +1,28 @@
+{
+  "mode": "aws_mesa_free",
+  "informality_rates": [
+    0.1
+  ],
+  "seeds": [
+    0
+  ],
+  "model_params": {
+    "n_firms": 50,
+    "n_consumers": 500,
+    "n_banks": 5,
+    "max_steps": 100,
+    "inflation_target": 0.02,
+    "initial_policy_rate": 0.03,
+    "current_inflation": 0.12
+  },
+  "aws_config": {
+    "region_name": "us-east-1",
+    "instance_type": "t3.medium",
+    "num_instances": 1,
+    "s3_bucket": "abm-mesa-free-2uttmrdb",
+    "iam_role": "LabInstanceProfile",
+    "security_group_id": "sg-07f094cefb93aca27",
+    "subnet_id": "subnet-0529074de3146bb49",
+    "estimated_runtime_hours": 0.5
+  }
+}

@@ -4,7 +4,7 @@ import pandas as pd
 from matplotlib.figure import Figure
 import asyncio
 import time
-from model import MonetaryPolicyModel
+from Model.Param_sweep_AWS.ABM_Model.model import MonetaryPolicyModel
 
 # Global variables to store model state
 model = None
