@@ -1,0 +1,20 @@
+{
+  "informality_rates": [
+    0.1,
+    0.2,
+    0.30000000000000004,
+    0.4,
+    0.5,
+    0.6,
+    0.7000000000000001,
+    0.8
+  ],
+  "n_seeds": 100,
+  "n_processes": 20,
+  "total_simulations": 800,
+  "start_time": "2025-05-30T00:15:14.154692",
+  "end_time": "2025-05-30T00:15:56.314170",
+  "duration_seconds": 42.159478,
+  "csv_file": "results/abm_sweep_results_20250530_001556.csv",
+  "pickle_file": "results/abm_sweep_results_full_20250530_001556.pkl"
+}

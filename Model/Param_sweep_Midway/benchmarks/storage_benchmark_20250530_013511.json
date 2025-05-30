@@ -1,0 +1,146 @@
+[
+  {
+    "n_rows": 1000,
+    "format": "CSV",
+    "write_time": 0.06206965446472168,
+    "read_time": 0.003606557846069336,
+    "file_size_mb": 0.1087636947631836,
+    "write_speed_mb_s": 1.752284521335643,
+    "read_speed_mb_s": 30.157202353407815
+  },
+  {
+    "n_rows": 1000,
+    "format": "Pickle",
+    "write_time": 0.0007526874542236328,
+    "read_time": 0.0005080699920654297,
+    "file_size_mb": 0.05534648895263672,
+    "write_speed_mb_s": 73.5318340196389,
+    "read_speed_mb_s": 108.93477240732051
+  },
+  {
+    "n_rows": 1000,
+    "format": "Parquet",
+    "write_time": 0.21479153633117676,
+    "read_time": 0.3157474994659424,
+    "file_size_mb": 0.059729576110839844,
+    "write_speed_mb_s": 0.27808160941102295,
+    "read_speed_mb_s": 0.1891688016908032
+  },
+  {
+    "n_rows": 1000,
+    "format": "Feather",
+    "write_time": 0.02135181427001953,
+    "read_time": 0.001331329345703125,
+    "file_size_mb": 0.05032539367675781,
+    "write_speed_mb_s": 2.356961007637679,
+    "read_speed_mb_s": 37.80085959885387
+  },
+  {
+    "n_rows": 10000,
+    "format": "CSV",
+    "write_time": 0.07319355010986328,
+    "read_time": 0.011310815811157227,
+    "file_size_mb": 1.0960273742675781,
+    "write_speed_mb_s": 14.974371001576568,
+    "read_speed_mb_s": 96.90082418161506
+  },
+  {
+    "n_rows": 10000,
+    "format": "Pickle",
+    "write_time": 0.0005970001220703125,
+    "read_time": 0.0005245208740234375,
+    "file_size_mb": 0.5445985794067383,
+    "write_speed_mb_s": 912.2252396166134,
+    "read_speed_mb_s": 1038.2781818181818
+  },
+  {
+    "n_rows": 10000,
+    "format": "Parquet",
+    "write_time": 0.0093994140625,
+    "read_time": 0.0030641555786132812,
+    "file_size_mb": 0.5664081573486328,
+    "write_speed_mb_s": 60.25994318181818,
+    "read_speed_mb_s": 184.84967320261438
+  },
+  {
+    "n_rows": 10000,
+    "format": "Feather",
+    "write_time": 0.0021653175354003906,
+    "read_time": 0.0011763572692871094,
+    "file_size_mb": 0.4621906280517578,
+    "write_speed_mb_s": 213.45166262937678,
+    "read_speed_mb_s": 392.89987839481154
+  },
+  {
+    "n_rows": 100000,
+    "format": "CSV",
+    "write_time": 0.7064642906188965,
+    "read_time": 0.10012102127075195,
+    "file_size_mb": 11.056361198425293,
+    "write_speed_mb_s": 15.650276093557952,
+    "read_speed_mb_s": 110.42996823340589
+  },
+  {
+    "n_rows": 100000,
+    "format": "Pickle",
+    "write_time": 0.03590846061706543,
+    "read_time": 0.006106138229370117,
+    "file_size_mb": 5.43696403503418,
+    "write_speed_mb_s": 151.4117826719164,
+    "read_speed_mb_s": 890.4095896294561
+  },
+  {
+    "n_rows": 100000,
+    "format": "Parquet",
+    "write_time": 0.05002140998840332,
+    "read_time": 0.009376287460327148,
+    "file_size_mb": 5.636585235595703,
+    "write_speed_mb_s": 112.68345368318201,
+    "read_speed_mb_s": 601.1532026343225
+  },
+  {
+    "n_rows": 100000,
+    "format": "Feather",
+    "write_time": 0.07711458206176758,
+    "read_time": 0.004395723342895508,
+    "file_size_mb": 4.579713821411133,
+    "write_speed_mb_s": 59.38842821896971,
+    "read_speed_mb_s": 1041.8567011986765
+  },
+  {
+    "n_rows": 1000000,
+    "format": "CSV",
+    "write_time": 7.03116250038147,
+    "read_time": 0.9678857326507568,
+    "file_size_mb": 111.51569938659668,
+    "write_speed_mb_s": 15.860207950043323,
+    "read_speed_mb_s": 115.21576940822104
+  },
+  {
+    "n_rows": 1000000,
+    "format": "Pickle",
+    "write_time": 0.024478435516357422,
+    "read_time": 0.023310184478759766,
+    "file_size_mb": 54.360456466674805,
+    "write_speed_mb_s": 2220.74880685692,
+    "read_speed_mb_s": 2332.0474583205482
+  },
+  {
+    "n_rows": 1000000,
+    "format": "Parquet",
+    "write_time": 0.1868124008178711,
+    "read_time": 0.051659584045410156,
+    "file_size_mb": 45.39780330657959,
+    "write_speed_mb_s": 243.01279308989368,
+    "read_speed_mb_s": 878.7876276098875
+  },
+  {
+    "n_rows": 1000000,
+    "format": "Feather",
+    "write_time": 0.03753805160522461,
+    "read_time": 0.03533482551574707,
+    "file_size_mb": 45.75728797912598,
+    "write_speed_mb_s": 1218.957458430192,
+    "read_speed_mb_s": 1294.9628959886643
+  }
+]

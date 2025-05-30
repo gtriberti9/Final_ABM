@@ -145,7 +145,7 @@ def comprehensive_analysis(df, output_dir):
     print("2. Analyzing by informality rate...")
     by_informality = df.groupBy("informality_rate").agg(
         count("*").alias("n_simulations"),
-        mean("converged").alias("convergence_rate"),
+        mean(col("converged").cast("double")).alias("convergence_rate"),  # FIX: Cast boolean to double
         mean("convergence_time").alias("avg_convergence_time"),
         mean("final_inflation").alias("avg_inflation"),
         stddev("final_inflation").alias("std_inflation"),
@@ -181,7 +181,7 @@ def comprehensive_analysis(df, output_dir):
     print("4. Analyzing by informality regime...")
     by_regime = df.groupBy("informality_category").agg(
         count("*").alias("n_simulations"),
-        mean("converged").alias("convergence_rate"),
+        mean(col("converged").cast("double")).alias("convergence_rate"),  # FIX: Cast boolean to double
         mean("final_inflation").alias("avg_inflation"),
         mean("inflation_volatility").alias("avg_inflation_volatility"),
         mean("credit_access_gap").alias("avg_credit_gap"),
@@ -251,8 +251,9 @@ def create_visualizations(by_informality_pd, correlation_matrix, output_dir):
     """
     print("Creating visualizations...")
     
-    # Set style
-    plt.style.use('seaborn-v0_8')
+    # Set style - use a more compatible style
+    plt.style.use('default')
+    sns.set_palette("husl")
     
     # Create figure with subplots
     fig, axes = plt.subplots(3, 3, figsize=(20, 15))
@@ -346,45 +347,59 @@ def create_visualizations(by_informality_pd, correlation_matrix, output_dir):
     plt.savefig(corr_plot_file, dpi=300, bbox_inches='tight')
     plt.close()
     
-    # Create distribution plots
+    # Create distribution plots using the actual data
+    print("Creating distribution plots...")
     fig, axes = plt.subplots(2, 2, figsize=(15, 10))
-    fig.suptitle('Distribution Analysis by Informality Level', fontsize=14, fontweight='bold')
+    fig.suptitle('Key Metrics by Informality Level', fontsize=14, fontweight='bold')
     
-    # We'll need the full data for distributions - this would require loading it
-    # For now, create summary visualizations
+    # Line plots showing trends across informality rates
+    # Plot 1: Convergence and Policy Effectiveness
+    axes[0, 0].plot(by_informality_pd['informality_rate'], by_informality_pd['convergence_rate'], 'o-', label='Convergence Rate', linewidth=2)
+    axes[0, 0].plot(by_informality_pd['informality_rate'], by_informality_pd['avg_policy_effectiveness'], 'o-', label='Policy Ineffectiveness', linewidth=2)
+    axes[0, 0].set_title('Convergence vs Policy Effectiveness')
+    axes[0, 0].set_xlabel('Informality Rate')
+    axes[0, 0].set_ylabel('Rate / Distance from Target')
+    axes[0, 0].legend()
+    axes[0, 0].grid(True, alpha=0.3)
     
-    # Box plots for key metrics across informality categories
-    informality_bins = ['Low (0.1-0.2)', 'Medium (0.3-0.5)', 'High (0.6-0.8)']
+    # Plot 2: Economic Indicators
+    axes[0, 1].plot(by_informality_pd['informality_rate'], by_informality_pd['avg_inflation'], 'o-', label='Avg Inflation', linewidth=2)
+    axes[0, 1].plot(by_informality_pd['informality_rate'], by_informality_pd['avg_inflation_volatility'], 'o-', label='Inflation Volatility', linewidth=2)
+    axes[0, 1].axhline(y=0.02, color='red', linestyle='--', alpha=0.7, label='Inflation Target')
+    axes[0, 1].set_title('Inflation Metrics by Informality')
+    axes[0, 1].set_xlabel('Informality Rate')
+    axes[0, 1].set_ylabel('Inflation Rate')
+    axes[0, 1].legend()
+    axes[0, 1].grid(True, alpha=0.3)
     
-    # Create sample data for visualization (in real implementation, use full dataset)
-    # This is a placeholder for the actual box plot creation
+    # Plot 3: Sectoral Analysis
+    axes[1, 0].plot(by_informality_pd['informality_rate'], by_informality_pd['avg_formal_production_ratio'], 'o-', label='Formal Production Share', linewidth=2)
+    axes[1, 0].plot(by_informality_pd['informality_rate'], by_informality_pd['avg_formal_credit_ratio'], 'o-', label='Formal Credit Share', linewidth=2)
+    axes[1, 0].set_title('Formal Sector Dominance')
+    axes[1, 0].set_xlabel('Informality Rate')
+    axes[1, 0].set_ylabel('Formal Sector Share')
+    axes[1, 0].legend()
+    axes[1, 0].grid(True, alpha=0.3)
     
-    axes[0, 0].text(0.5, 0.5, 'Distribution plots would go here\n(requires full dataset)', 
-                   ha='center', va='center', transform=axes[0, 0].transAxes)
-    axes[0, 0].set_title('Inflation Distribution by Informality Level')
-    
-    axes[0, 1].text(0.5, 0.5, 'Box plot: Policy Rate\nby Informality Category', 
-                   ha='center', va='center', transform=axes[0, 1].transAxes)
-    axes[0, 1].set_title('Policy Rate Distribution by Informality Level')
-    
-    axes[1, 0].text(0.5, 0.5, 'Box plot: Credit Gap\nby Informality Category', 
-                   ha='center', va='center', transform=axes[1, 0].transAxes)
-    axes[1, 0].set_title('Credit Gap Distribution by Informality Level')
-    
-    axes[1, 1].text(0.5, 0.5, 'Box plot: Economic Stability\nby Informality Category', 
-                   ha='center', va='center', transform=axes[1, 1].transAxes)
-    axes[1, 1].set_title('Economic Stability Distribution by Informality Level')
+    # Plot 4: Gaps and Stability
+    axes[1, 1].plot(by_informality_pd['informality_rate'], by_informality_pd['avg_credit_gap'], 'o-', label='Credit Access Gap', linewidth=2)
+    axes[1, 1].plot(by_informality_pd['informality_rate'], by_informality_pd['avg_economic_stability'], 'o-', label='Economic Instability', linewidth=2)
+    axes[1, 1].set_title('Gaps and Stability Measures')
+    axes[1, 1].set_xlabel('Informality Rate')
+    axes[1, 1].set_ylabel('Gap / Instability Measure')
+    axes[1, 1].legend()
+    axes[1, 1].grid(True, alpha=0.3)
     
     plt.tight_layout()
     
-    dist_plot_file = os.path.join(output_dir, f'distribution_analysis_{timestamp}.png')
+    dist_plot_file = os.path.join(output_dir, f'key_metrics_analysis_{timestamp}.png')
     plt.savefig(dist_plot_file, dpi=300, bbox_inches='tight')
     plt.close()
     
     print(f"Visualizations saved:")
     print(f"  Main analysis: {main_plot_file}")
     print(f"  Correlation matrix: {corr_plot_file}")
-    print(f"  Distribution analysis: {dist_plot_file}")
+    print(f"  Key metrics analysis: {dist_plot_file}")
     
     return main_plot_file, corr_plot_file, dist_plot_file
 

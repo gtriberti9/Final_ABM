@@ -1,0 +1,124 @@
+Using conda environment: abm_env
+============================================
+ABM Scalability Benchmark
+============================================
+Job ID: 31325506
+Node: midway3-0016
+Start Time: Fri May 30 01:21:28 CDT 2025
+Available cores: 20
+Python: /home/gtriberti/.conda/envs/abm_env/bin/python
+Python version: Python 3.9.22
+============================================
+Installing additional packages for benchmarking...
+Requirement already satisfied: pyarrow in /home/gtriberti/.conda/envs/abm_env/lib/python3.9/site-packages (20.0.0)
+Some packages may not install, continuing...
+============================================
+Starting comprehensive scalability benchmark...
+Testing compute scalability (cores: 1, 2, 4, 8, 16, 20)
+Testing storage formats: CSV, Pickle, Parquet, HDF5, Feather
+Data sizes: 1K, 10K, 100K, 1M rows
+Starting scalability benchmark...
+
+Benchmarking with 50 simulations...
+  Testing 1 cores...
+    Runtime: 29.68s, Speedup: 1.00x, Efficiency: 100.00%
+  Testing 2 cores...
+    Runtime: 17.28s, Speedup: 1.72x, Efficiency: 89.04%
+  Testing 4 cores...
+    Runtime: 7.48s, Speedup: 3.97x, Efficiency: 94.05%
+  Testing 8 cores...
+    Runtime: 4.57s, Speedup: 6.50x, Efficiency: 82.48%
+  Testing 20 cores...
+    Runtime: 1.94s, Speedup: 15.28x, Efficiency: 76.75%
+
+Benchmarking with 100 simulations...
+  Testing 1 cores...
+    Runtime: 57.52s, Speedup: 1.00x, Efficiency: 100.00%
+  Testing 2 cores...
+    Runtime: 30.43s, Speedup: 1.00x, Efficiency: 97.71%
+  Testing 4 cores...
+    Runtime: 16.22s, Speedup: 1.00x, Efficiency: 90.71%
+  Testing 8 cores...
+    Runtime: 9.55s, Speedup: 1.00x, Efficiency: 80.90%
+  Testing 20 cores...
+    Runtime: 4.12s, Speedup: 1.00x, Efficiency: 76.25%
+
+Benchmarking with 200 simulations...
+  Testing 1 cores...
+    Runtime: 119.54s, Speedup: 1.00x, Efficiency: 100.00%
+  Testing 2 cores...
+    Runtime: 60.27s, Speedup: 1.00x, Efficiency: 99.18%
+  Testing 4 cores...
+    Runtime: 30.76s, Speedup: 1.00x, Efficiency: 96.25%
+  Testing 8 cores...
+    Runtime: 16.66s, Speedup: 1.00x, Efficiency: 88.21%
+  Testing 20 cores...
+    Runtime: 7.22s, Speedup: 1.00x, Efficiency: 83.10%
+
+Benchmarking storage formats...
+Testing with 1,000 rows...
+  CSV: 0.1MB, Write: 0.06s, Read: 0.00s
+  Pickle: 0.1MB, Write: 0.00s, Read: 0.00s
+  Parquet: 0.1MB, Write: 0.21s, Read: 0.32s
+  HDF5: Error - Missing optional dependency 'pytables'.  Use pip or conda to install pytables.
+  Feather: 0.1MB, Write: 0.02s, Read: 0.00s
+Testing with 10,000 rows...
+  CSV: 1.1MB, Write: 0.07s, Read: 0.01s
+  Pickle: 0.5MB, Write: 0.00s, Read: 0.00s
+  Parquet: 0.6MB, Write: 0.01s, Read: 0.00s
+  HDF5: Error - Missing optional dependency 'pytables'.  Use pip or conda to install pytables.
+  Feather: 0.5MB, Write: 0.00s, Read: 0.00s
+Testing with 100,000 rows...
+  CSV: 11.1MB, Write: 0.71s, Read: 0.10s
+  Pickle: 5.4MB, Write: 0.04s, Read: 0.01s
+  Parquet: 5.6MB, Write: 0.05s, Read: 0.01s
+  HDF5: Error - Missing optional dependency 'pytables'.  Use pip or conda to install pytables.
+  Feather: 4.6MB, Write: 0.08s, Read: 0.00s
+Testing with 1,000,000 rows...
+  CSV: 111.5MB, Write: 7.03s, Read: 0.97s
+  Pickle: 54.4MB, Write: 0.02s, Read: 0.02s
+  Parquet: 45.4MB, Write: 0.19s, Read: 0.05s
+  HDF5: Error - Missing optional dependency 'pytables'.  Use pip or conda to install pytables.
+  Feather: 45.8MB, Write: 0.04s, Read: 0.04s
+
+Creating scalability visualizations...
+Scalability analysis saved:
+  Plot: benchmarks/scalability_analysis_20250530_013509.png
+  Summary: benchmarks/scalability_summary_20250530_013509.csv
+Compute benchmark results: benchmarks/compute_benchmark_20250530_013511.json
+Storage benchmark results: benchmarks/storage_benchmark_20250530_013511.json
+
+Scalability analysis complete!
+============================================
+Benchmark completed at: Fri May 30 01:35:11 CDT 2025
+Exit code: 0
+SUCCESS: Scalability benchmark completed!
+Benchmark results:
+total 2
+drwxrwxr-x 2 gtriberti gtriberti   4096 May 30 01:35 .
+drwxrwxr-x 7 gtriberti gtriberti   4096 May 30 01:21 ..
+-rw-rw-r-- 1 gtriberti gtriberti   4726 May 30 01:35 compute_benchmark_20250530_013511.json
+-rw-rw-r-- 1 gtriberti gtriberti 869410 May 30 01:35 scalability_analysis_20250530_013509.png
+-rw-rw-r-- 1 gtriberti gtriberti    254 May 30 01:35 scalability_summary_20250530_013509.csv
+-rw-rw-r-- 1 gtriberti gtriberti   4113 May 30 01:35 storage_benchmark_20250530_013511.json
+Generated files:
+  Plot: benchmarks/scalability_analysis_20250530_013509.png
+  Data: benchmarks/storage_benchmark_20250530_013511.json
+  Data: benchmarks/compute_benchmark_20250530_013511.json
+  Summary: benchmarks/scalability_summary_20250530_013509.csv
+Total benchmark data size:
+1.0K	benchmarks/
+Performance Summary:
+Latest summary:
+Metric,Value,Details
+Compute Performance,,
+Best Throughput,27.7 sims/sec,20 cores
+Best Efficiency,100.0%,1 cores
+Max Speedup Tested,15.28x,20 cores
+,,
+Storage Performance,,
+Fastest Write,Pickle,0.02s
+Fastest Read,Pickle,0.02s
+Most Compact,Parquet,45.4MB
+============================================
+Scalability benchmark job completed!

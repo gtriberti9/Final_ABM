@@ -1,0 +1,167 @@
+[
+  {
+    "n_sims": 50,
+    "n_cores": 1,
+    "total_runtime": 29.677971363067627,
+    "avg_sim_time": 0.593470139503479,
+    "total_sim_time": 29.67350697517395,
+    "efficiency": 1.0,
+    "speedup": 1.0,
+    "sims_per_second": 1.68475127185485,
+    "timestamp": "2025-05-30T01:28:33.800749"
+  },
+  {
+    "n_sims": 50,
+    "n_cores": 2,
+    "total_runtime": 17.28094983100891,
+    "avg_sim_time": 0.6154913568496704,
+    "total_sim_time": 30.77456784248352,
+    "efficiency": 0.8904188757976046,
+    "speedup": 1.7173807952276743,
+    "sims_per_second": 2.8933594790189177,
+    "timestamp": "2025-05-30T01:28:51.081906"
+  },
+  {
+    "n_sims": 50,
+    "n_cores": 4,
+    "total_runtime": 7.477473497390747,
+    "avg_sim_time": 0.5625931167602539,
+    "total_sim_time": 28.129655838012695,
+    "efficiency": 0.9404799578302917,
+    "speedup": 3.968983825007699,
+    "sims_per_second": 6.686750547153049,
+    "timestamp": "2025-05-30T01:28:58.559556"
+  },
+  {
+    "n_sims": 50,
+    "n_cores": 8,
+    "total_runtime": 4.565654277801514,
+    "avg_sim_time": 0.6025040435791016,
+    "total_sim_time": 30.125202178955078,
+    "efficiency": 0.8247777959619508,
+    "speedup": 6.500266896546178,
+    "sims_per_second": 10.951332921352153,
+    "timestamp": "2025-05-30T01:29:03.125393"
+  },
+  {
+    "n_sims": 50,
+    "n_cores": 20,
+    "total_runtime": 1.9416608810424805,
+    "avg_sim_time": 0.5961081266403199,
+    "total_sim_time": 29.80540633201599,
+    "efficiency": 0.7675234801046573,
+    "speedup": 15.284837662863909,
+    "sims_per_second": 25.751149692604884,
+    "timestamp": "2025-05-30T01:29:05.067259"
+  },
+  {
+    "n_sims": 100,
+    "n_cores": 1,
+    "total_runtime": 57.516321420669556,
+    "avg_sim_time": 0.5750726699829102,
+    "total_sim_time": 57.507266998291016,
+    "efficiency": 1.0,
+    "speedup": 1.0,
+    "sims_per_second": 1.7386369213115767,
+    "timestamp": "2025-05-30T01:30:02.584419"
+  },
+  {
+    "n_sims": 100,
+    "n_cores": 2,
+    "total_runtime": 30.434778213500977,
+    "avg_sim_time": 0.59475506067276,
+    "total_sim_time": 59.475506067276,
+    "efficiency": 0.9770977407828202,
+    "speedup": 1.0,
+    "sims_per_second": 3.2857147602159835,
+    "timestamp": "2025-05-30T01:30:33.019418"
+  },
+  {
+    "n_sims": 100,
+    "n_cores": 4,
+    "total_runtime": 16.220851182937622,
+    "avg_sim_time": 0.5885564875602722,
+    "total_sim_time": 58.85564875602722,
+    "efficiency": 0.9070986487123478,
+    "speedup": 1.0,
+    "sims_per_second": 6.164904595462162,
+    "timestamp": "2025-05-30T01:30:49.240475"
+  },
+  {
+    "n_sims": 100,
+    "n_cores": 8,
+    "total_runtime": 9.554181575775146,
+    "avg_sim_time": 0.6183624172210693,
+    "total_sim_time": 61.836241722106934,
+    "efficiency": 0.8090206527853494,
+    "speedup": 1.0,
+    "sims_per_second": 10.466621259695584,
+    "timestamp": "2025-05-30T01:30:58.794877"
+  },
+  {
+    "n_sims": 100,
+    "n_cores": 20,
+    "total_runtime": 4.118349075317383,
+    "avg_sim_time": 0.628076708316803,
+    "total_sim_time": 62.8076708316803,
+    "efficiency": 0.7625345700793951,
+    "speedup": 1.0,
+    "sims_per_second": 24.281574526873598,
+    "timestamp": "2025-05-30T01:31:02.913448"
+  },
+  {
+    "n_sims": 200,
+    "n_cores": 1,
+    "total_runtime": 119.53938674926758,
+    "avg_sim_time": 0.5976057577133179,
+    "total_sim_time": 119.52115154266357,
+    "efficiency": 1.0,
+    "speedup": 1.0,
+    "sims_per_second": 1.6730887236312963,
+    "timestamp": "2025-05-30T01:33:02.454212"
+  },
+  {
+    "n_sims": 200,
+    "n_cores": 2,
+    "total_runtime": 60.27184844017029,
+    "avg_sim_time": 0.5977819085121154,
+    "total_sim_time": 119.5563817024231,
+    "efficiency": 0.9918094831710897,
+    "speedup": 1.0,
+    "sims_per_second": 3.318298760963551,
+    "timestamp": "2025-05-30T01:34:02.726316"
+  },
+  {
+    "n_sims": 200,
+    "n_cores": 4,
+    "total_runtime": 30.757213592529297,
+    "avg_sim_time": 0.5921049380302429,
+    "total_sim_time": 118.42098760604858,
+    "efficiency": 0.9625464547511237,
+    "speedup": 1.0,
+    "sims_per_second": 6.502539620447886,
+    "timestamp": "2025-05-30T01:34:33.483780"
+  },
+  {
+    "n_sims": 200,
+    "n_cores": 8,
+    "total_runtime": 16.657779455184937,
+    "avg_sim_time": 0.5877528989315033,
+    "total_sim_time": 117.55057978630066,
+    "efficiency": 0.882099712798992,
+    "speedup": 1.0,
+    "sims_per_second": 12.006402206132437,
+    "timestamp": "2025-05-30T01:34:50.141808"
+  },
+  {
+    "n_sims": 200,
+    "n_cores": 20,
+    "total_runtime": 7.2236247062683105,
+    "avg_sim_time": 0.6002758038043976,
+    "total_sim_time": 120.05516076087952,
+    "efficiency": 0.8309897429797362,
+    "speedup": 1.0,
+    "sims_per_second": 27.686931164412474,
+    "timestamp": "2025-05-30T01:34:57.365698"
+  }
+]

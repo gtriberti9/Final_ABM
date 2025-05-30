@@ -10,8 +10,12 @@
 #SBATCH --partition=caslake
 #SBATCH --account=macs30123
 
-# Load required modules - Use Python 3.9 for Mesa 3.1.4 compatibility
+# Load required modules
 module load python/anaconda-2022.05
+
+# Initialize conda
+source /software/python-anaconda-2022.05-el8-x86_64/etc/profile.d/conda.sh
+conda activate abm_env
 
 # Set Python path
 export PYTHONPATH="${PYTHONPATH}:${PWD}"

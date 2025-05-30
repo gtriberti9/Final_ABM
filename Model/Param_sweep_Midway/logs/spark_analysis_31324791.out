@@ -1,0 +1,1070 @@
+Using conda environment: abm_env
+============================================
+ABM Spark Analysis Job Information
+============================================
+Job ID: 31324791
+Job Name: abm-spark-analysis
+Node: midway3-0070
+Start Time: Fri May 30 00:47:40 CDT 2025
+Python: /home/gtriberti/.conda/envs/abm_env/bin/python
+Python version: Python 3.9.22
+============================================
+Using results file: results/abm_sweep_results_20250530_001556.csv
+File size: 18M
+Number of rows: 801
+============================================
+Starting Spark analysis...
+Initializing Spark session...
+25/05/30 00:48:12 INFO SparkContext: Running Spark version 3.3.2
+25/05/30 00:48:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/05/30 00:48:12 INFO ResourceUtils: ==============================================================
+25/05/30 00:48:12 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/05/30 00:48:12 INFO ResourceUtils: ==============================================================
+25/05/30 00:48:12 INFO SparkContext: Submitted application: ABM_Parameter_Sweep_Analysis
+25/05/30 00:48:12 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/05/30 00:48:12 INFO ResourceProfile: Limiting resource is cpu
+25/05/30 00:48:12 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/05/30 00:48:12 INFO SecurityManager: Changing view acls to: gtriberti
+25/05/30 00:48:12 INFO SecurityManager: Changing modify acls to: gtriberti
+25/05/30 00:48:12 INFO SecurityManager: Changing view acls groups to: 
+25/05/30 00:48:12 INFO SecurityManager: Changing modify acls groups to: 
+25/05/30 00:48:12 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(gtriberti); groups with view permissions: Set(); users  with modify permissions: Set(gtriberti); groups with modify permissions: Set()
+25/05/30 00:48:12 INFO Utils: Successfully started service 'sparkDriver' on port 41599.
+25/05/30 00:48:12 INFO SparkEnv: Registering MapOutputTracker
+25/05/30 00:48:12 INFO SparkEnv: Registering BlockManagerMaster
+25/05/30 00:48:12 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/05/30 00:48:12 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/05/30 00:48:12 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/05/30 00:48:12 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-d0f80a84-bbff-456c-8be9-33490b5947c6
+25/05/30 00:48:12 INFO MemoryStore: MemoryStore started with capacity 2.2 GiB
+25/05/30 00:48:12 INFO SparkEnv: Registering OutputCommitCoordinator
+25/05/30 00:48:12 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/05/30 00:48:13 INFO Executor: Starting executor ID driver on host midway3-0070.rcc.local
+25/05/30 00:48:13 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/05/30 00:48:13 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36625.
+25/05/30 00:48:13 INFO NettyBlockTransferService: Server created on midway3-0070.rcc.local:36625
+25/05/30 00:48:13 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/05/30 00:48:13 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, midway3-0070.rcc.local, 36625, None)
+25/05/30 00:48:13 INFO BlockManagerMasterEndpoint: Registering block manager midway3-0070.rcc.local:36625 with 2.2 GiB RAM, BlockManagerId(driver, midway3-0070.rcc.local, 36625, None)
+25/05/30 00:48:13 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, midway3-0070.rcc.local, 36625, None)
+25/05/30 00:48:13 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, midway3-0070.rcc.local, 36625, None)
+Loading and preparing data...
+25/05/30 00:48:13 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/05/30 00:48:13 INFO SharedState: Warehouse path is 'file:/home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark-warehouse'.
+25/05/30 00:48:14 INFO InMemoryFileIndex: It took 26 ms to list leaf files for 1 paths.
+25/05/30 00:48:15 INFO FileSourceStrategy: Pushed Filters: 
+25/05/30 00:48:15 INFO FileSourceStrategy: Post-Scan Filters: 
+25/05/30 00:48:15 INFO FileSourceStrategy: Output Data Schema: struct<>
+25/05/30 00:48:16 INFO CodeGenerator: Code generated in 130.95246 ms
+25/05/30 00:48:16 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 199.7 KiB, free 2.2 GiB)
+25/05/30 00:48:16 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.1 KiB, free 2.2 GiB)
+25/05/30 00:48:16 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on midway3-0070.rcc.local:36625 (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:16 INFO SparkContext: Created broadcast 0 from count at NativeMethodAccessorImpl.java:0
+25/05/30 00:48:16 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/05/30 00:48:16 INFO DAGScheduler: Registering RDD 3 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+25/05/30 00:48:16 INFO DAGScheduler: Got map stage job 0 (count at NativeMethodAccessorImpl.java:0) with 5 output partitions
+25/05/30 00:48:16 INFO DAGScheduler: Final stage: ShuffleMapStage 0 (count at NativeMethodAccessorImpl.java:0)
+25/05/30 00:48:16 INFO DAGScheduler: Parents of final stage: List()
+25/05/30 00:48:16 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:16 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/30 00:48:16 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 18.1 KiB, free 2.2 GiB)
+25/05/30 00:48:16 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 8.9 KiB, free 2.2 GiB)
+25/05/30 00:48:16 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on midway3-0070.rcc.local:36625 (size: 8.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:16 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:16 INFO DAGScheduler: Submitting 5 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+25/05/30 00:48:16 INFO TaskSchedulerImpl: Adding task set 0.0 with 5 tasks resource profile 0
+25/05/30 00:48:16 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (midway3-0070.rcc.local, executor driver, partition 0, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:16 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (midway3-0070.rcc.local, executor driver, partition 1, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:16 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (midway3-0070.rcc.local, executor driver, partition 2, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:16 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (midway3-0070.rcc.local, executor driver, partition 3, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:16 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (midway3-0070.rcc.local, executor driver, partition 4, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:16 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+25/05/30 00:48:16 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+25/05/30 00:48:16 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+25/05/30 00:48:16 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/05/30 00:48:16 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+25/05/30 00:48:16 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 0-4194304, partition values: [empty row]
+25/05/30 00:48:16 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 8388608-12582912, partition values: [empty row]
+25/05/30 00:48:16 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 4194304-8388608, partition values: [empty row]
+25/05/30 00:48:16 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 16777216-18235193, partition values: [empty row]
+25/05/30 00:48:16 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 12582912-16777216, partition values: [empty row]
+25/05/30 00:48:16 INFO CodeGenerator: Code generated in 7.148673 ms
+25/05/30 00:48:16 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2020 bytes result sent to driver
+25/05/30 00:48:16 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2020 bytes result sent to driver
+25/05/30 00:48:16 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2020 bytes result sent to driver
+25/05/30 00:48:16 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 2020 bytes result sent to driver
+25/05/30 00:48:16 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2020 bytes result sent to driver
+25/05/30 00:48:16 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 354 ms on midway3-0070.rcc.local (executor driver) (1/5)
+25/05/30 00:48:16 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 345 ms on midway3-0070.rcc.local (executor driver) (2/5)
+25/05/30 00:48:16 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 345 ms on midway3-0070.rcc.local (executor driver) (3/5)
+25/05/30 00:48:16 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 347 ms on midway3-0070.rcc.local (executor driver) (4/5)
+25/05/30 00:48:16 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 346 ms on midway3-0070.rcc.local (executor driver) (5/5)
+25/05/30 00:48:16 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+25/05/30 00:48:16 INFO DAGScheduler: ShuffleMapStage 0 (count at NativeMethodAccessorImpl.java:0) finished in 0.474 s
+25/05/30 00:48:16 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:16 INFO DAGScheduler: running: Set()
+25/05/30 00:48:16 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:16 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:16 INFO CodeGenerator: Code generated in 9.635723 ms
+25/05/30 00:48:16 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+25/05/30 00:48:16 INFO DAGScheduler: Got job 1 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/05/30 00:48:16 INFO DAGScheduler: Final stage: ResultStage 2 (count at NativeMethodAccessorImpl.java:0)
+25/05/30 00:48:16 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+25/05/30 00:48:16 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:16 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[6] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/30 00:48:16 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 11.1 KiB, free 2.2 GiB)
+25/05/30 00:48:16 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.5 KiB, free 2.2 GiB)
+25/05/30 00:48:16 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on midway3-0070.rcc.local:36625 (size: 5.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:16 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:16 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[6] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:16 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+25/05/30 00:48:16 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 5) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:16 INFO Executor: Running task 0.0 in stage 2.0 (TID 5)
+25/05/30 00:48:16 INFO ShuffleBlockFetcherIterator: Getting 5 (300.0 B) non-empty blocks including 5 (300.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:16 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 19 ms
+25/05/30 00:48:17 INFO BlockManagerInfo: Removed broadcast_1_piece0 on midway3-0070.rcc.local:36625 in memory (size: 8.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO Executor: Finished task 0.0 in stage 2.0 (TID 5). 2656 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 5) in 59 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+25/05/30 00:48:17 INFO DAGScheduler: ResultStage 2 (count at NativeMethodAccessorImpl.java:0) finished in 0.070 s
+25/05/30 00:48:17 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+25/05/30 00:48:17 INFO DAGScheduler: Job 1 finished: count at NativeMethodAccessorImpl.java:0, took 0.081914 s
+Loaded 800 simulation results
+Data schema:
+root
+ |-- sim_id: integer (nullable = true)
+ |-- informality_rate: double (nullable = true)
+ |-- seed: integer (nullable = true)
+ |-- steps_run: integer (nullable = true)
+ |-- converged: boolean (nullable = true)
+ |-- convergence_time: integer (nullable = true)
+ |-- final_inflation: double (nullable = true)
+ |-- final_policy_rate: double (nullable = true)
+ |-- final_output_gap: double (nullable = true)
+ |-- avg_lending_rate: double (nullable = true)
+ |-- inflation_volatility: double (nullable = true)
+ |-- policy_rate_volatility: double (nullable = true)
+ |-- formal_firms_count: integer (nullable = true)
+ |-- informal_firms_count: integer (nullable = true)
+ |-- formal_consumers_count: integer (nullable = true)
+ |-- informal_consumers_count: integer (nullable = true)
+ |-- formal_production: double (nullable = true)
+ |-- informal_production: double (nullable = true)
+ |-- total_production: double (nullable = true)
+ |-- production_ratio_formal: double (nullable = true)
+ |-- formal_consumption: double (nullable = true)
+ |-- informal_consumption: double (nullable = true)
+ |-- total_consumption: double (nullable = true)
+ |-- consumption_ratio_formal: double (nullable = true)
+ |-- total_formal_loans: double (nullable = true)
+ |-- total_informal_loans: double (nullable = true)
+ |-- credit_access_gap: double (nullable = true)
+ |-- formal_credit_ratio: double (nullable = true)
+ |-- avg_formal_firm_production: double (nullable = true)
+ |-- avg_informal_firm_production: double (nullable = true)
+ |-- avg_formal_firm_price: double (nullable = true)
+ |-- avg_informal_firm_price: double (nullable = true)
+ |-- avg_formal_credit_access: double (nullable = true)
+ |-- avg_informal_credit_access: double (nullable = true)
+ |-- informality_category: string (nullable = false)
+ |-- convergence_efficiency: integer (nullable = true)
+ |-- policy_effectiveness: double (nullable = true)
+ |-- economic_stability: double (nullable = true)
+ |-- production_gap: double (nullable = true)
+ |-- price_gap: double (nullable = true)
+
+Performing comprehensive analysis...
+1. Computing overall statistics...
+25/05/30 00:48:17 INFO FileSourceStrategy: Pushed Filters: 
+25/05/30 00:48:17 INFO FileSourceStrategy: Post-Scan Filters: 
+25/05/30 00:48:17 INFO FileSourceStrategy: Output Data Schema: struct<>
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 199.7 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Removed broadcast_2_piece0 on midway3-0070.rcc.local:36625 in memory (size: 5.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 34.1 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on midway3-0070.rcc.local:36625 (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO SparkContext: Created broadcast 3 from count at NativeMethodAccessorImpl.java:0
+25/05/30 00:48:17 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/05/30 00:48:17 INFO DAGScheduler: Registering RDD 10 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+25/05/30 00:48:17 INFO DAGScheduler: Got map stage job 2 (count at NativeMethodAccessorImpl.java:0) with 5 output partitions
+25/05/30 00:48:17 INFO DAGScheduler: Final stage: ShuffleMapStage 3 (count at NativeMethodAccessorImpl.java:0)
+25/05/30 00:48:17 INFO DAGScheduler: Parents of final stage: List()
+25/05/30 00:48:17 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:17 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[10] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 18.1 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 8.9 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on midway3-0070.rcc.local:36625 (size: 8.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:17 INFO DAGScheduler: Submitting 5 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[10] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Adding task set 3.0 with 5 tasks resource profile 0
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6) (midway3-0070.rcc.local, executor driver, partition 0, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7) (midway3-0070.rcc.local, executor driver, partition 1, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 8) (midway3-0070.rcc.local, executor driver, partition 2, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 9) (midway3-0070.rcc.local, executor driver, partition 3, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 4.0 in stage 3.0 (TID 10) (midway3-0070.rcc.local, executor driver, partition 4, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO Executor: Running task 0.0 in stage 3.0 (TID 6)
+25/05/30 00:48:17 INFO Executor: Running task 2.0 in stage 3.0 (TID 8)
+25/05/30 00:48:17 INFO Executor: Running task 1.0 in stage 3.0 (TID 7)
+25/05/30 00:48:17 INFO Executor: Running task 4.0 in stage 3.0 (TID 10)
+25/05/30 00:48:17 INFO Executor: Running task 3.0 in stage 3.0 (TID 9)
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 0-4194304, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 12582912-16777216, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 16777216-18235193, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 8388608-12582912, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 4194304-8388608, partition values: [empty row]
+25/05/30 00:48:17 INFO Executor: Finished task 4.0 in stage 3.0 (TID 10). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 4.0 in stage 3.0 (TID 10) in 142 ms on midway3-0070.rcc.local (executor driver) (1/5)
+25/05/30 00:48:17 INFO Executor: Finished task 3.0 in stage 3.0 (TID 9). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO Executor: Finished task 0.0 in stage 3.0 (TID 6). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO Executor: Finished task 1.0 in stage 3.0 (TID 7). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO Executor: Finished task 2.0 in stage 3.0 (TID 8). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 150 ms on midway3-0070.rcc.local (executor driver) (2/5)
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 9) in 149 ms on midway3-0070.rcc.local (executor driver) (3/5)
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 150 ms on midway3-0070.rcc.local (executor driver) (4/5)
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 8) in 150 ms on midway3-0070.rcc.local (executor driver) (5/5)
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+25/05/30 00:48:17 INFO DAGScheduler: ShuffleMapStage 3 (count at NativeMethodAccessorImpl.java:0) finished in 0.157 s
+25/05/30 00:48:17 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:17 INFO DAGScheduler: running: Set()
+25/05/30 00:48:17 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:17 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:17 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+25/05/30 00:48:17 INFO DAGScheduler: Got job 3 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/05/30 00:48:17 INFO DAGScheduler: Final stage: ResultStage 5 (count at NativeMethodAccessorImpl.java:0)
+25/05/30 00:48:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 4)
+25/05/30 00:48:17 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:17 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[13] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 11.1 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 5.5 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Removed broadcast_4_piece0 on midway3-0070.rcc.local:36625 in memory (size: 8.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on midway3-0070.rcc.local:36625 (size: 5.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[13] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 11) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO Executor: Running task 0.0 in stage 5.0 (TID 11)
+25/05/30 00:48:17 INFO ShuffleBlockFetcherIterator: Getting 5 (300.0 B) non-empty blocks including 5 (300.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/05/30 00:48:17 INFO Executor: Finished task 0.0 in stage 5.0 (TID 11). 2656 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 11) in 9 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+25/05/30 00:48:17 INFO DAGScheduler: ResultStage 5 (count at NativeMethodAccessorImpl.java:0) finished in 0.018 s
+25/05/30 00:48:17 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 5: Stage finished
+25/05/30 00:48:17 INFO DAGScheduler: Job 3 finished: count at NativeMethodAccessorImpl.java:0, took 0.020818 s
+25/05/30 00:48:17 INFO FileSourceStrategy: Pushed Filters: IsNotNull(converged),EqualTo(converged,true)
+25/05/30 00:48:17 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(converged#4),converged#4
+25/05/30 00:48:17 INFO FileSourceStrategy: Output Data Schema: struct<converged: boolean>
+25/05/30 00:48:17 INFO CodeGenerator: Code generated in 11.095213 ms
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 199.7 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Removed broadcast_3_piece0 on midway3-0070.rcc.local:36625 in memory (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Removed broadcast_5_piece0 on midway3-0070.rcc.local:36625 in memory (size: 5.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 34.1 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on midway3-0070.rcc.local:36625 (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO SparkContext: Created broadcast 6 from count at NativeMethodAccessorImpl.java:0
+25/05/30 00:48:17 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/05/30 00:48:17 INFO DAGScheduler: Registering RDD 17 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 2
+25/05/30 00:48:17 INFO DAGScheduler: Got map stage job 4 (count at NativeMethodAccessorImpl.java:0) with 5 output partitions
+25/05/30 00:48:17 INFO DAGScheduler: Final stage: ShuffleMapStage 6 (count at NativeMethodAccessorImpl.java:0)
+25/05/30 00:48:17 INFO DAGScheduler: Parents of final stage: List()
+25/05/30 00:48:17 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:17 INFO DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[17] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 18.9 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 9.2 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on midway3-0070.rcc.local:36625 (size: 9.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:17 INFO DAGScheduler: Submitting 5 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[17] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Adding task set 6.0 with 5 tasks resource profile 0
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 12) (midway3-0070.rcc.local, executor driver, partition 0, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 13) (midway3-0070.rcc.local, executor driver, partition 1, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 14) (midway3-0070.rcc.local, executor driver, partition 2, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 3.0 in stage 6.0 (TID 15) (midway3-0070.rcc.local, executor driver, partition 3, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 4.0 in stage 6.0 (TID 16) (midway3-0070.rcc.local, executor driver, partition 4, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO Executor: Running task 0.0 in stage 6.0 (TID 12)
+25/05/30 00:48:17 INFO Executor: Running task 1.0 in stage 6.0 (TID 13)
+25/05/30 00:48:17 INFO Executor: Running task 4.0 in stage 6.0 (TID 16)
+25/05/30 00:48:17 INFO Executor: Running task 2.0 in stage 6.0 (TID 14)
+25/05/30 00:48:17 INFO Executor: Running task 3.0 in stage 6.0 (TID 15)
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 0-4194304, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 12582912-16777216, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 4194304-8388608, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 16777216-18235193, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 8388608-12582912, partition values: [empty row]
+25/05/30 00:48:17 INFO CodeGenerator: Code generated in 8.750644 ms
+25/05/30 00:48:17 INFO CodeGenerator: Code generated in 5.499386 ms
+25/05/30 00:48:17 INFO Executor: Finished task 4.0 in stage 6.0 (TID 16). 2033 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 4.0 in stage 6.0 (TID 16) in 101 ms on midway3-0070.rcc.local (executor driver) (1/5)
+25/05/30 00:48:17 INFO Executor: Finished task 0.0 in stage 6.0 (TID 12). 2033 bytes result sent to driver
+25/05/30 00:48:17 INFO Executor: Finished task 3.0 in stage 6.0 (TID 15). 2033 bytes result sent to driver
+25/05/30 00:48:17 INFO Executor: Finished task 2.0 in stage 6.0 (TID 14). 2033 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 12) in 112 ms on midway3-0070.rcc.local (executor driver) (2/5)
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 3.0 in stage 6.0 (TID 15) in 111 ms on midway3-0070.rcc.local (executor driver) (3/5)
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 14) in 111 ms on midway3-0070.rcc.local (executor driver) (4/5)
+25/05/30 00:48:17 INFO Executor: Finished task 1.0 in stage 6.0 (TID 13). 2033 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 13) in 113 ms on midway3-0070.rcc.local (executor driver) (5/5)
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+25/05/30 00:48:17 INFO DAGScheduler: ShuffleMapStage 6 (count at NativeMethodAccessorImpl.java:0) finished in 0.121 s
+25/05/30 00:48:17 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:17 INFO DAGScheduler: running: Set()
+25/05/30 00:48:17 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:17 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:17 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+25/05/30 00:48:17 INFO DAGScheduler: Got job 5 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/05/30 00:48:17 INFO DAGScheduler: Final stage: ResultStage 8 (count at NativeMethodAccessorImpl.java:0)
+25/05/30 00:48:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+25/05/30 00:48:17 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:17 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[20] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 11.1 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 5.5 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Removed broadcast_7_piece0 on midway3-0070.rcc.local:36625 in memory (size: 9.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on midway3-0070.rcc.local:36625 (size: 5.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[20] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks resource profile 0
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 17) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO Executor: Running task 0.0 in stage 8.0 (TID 17)
+25/05/30 00:48:17 INFO ShuffleBlockFetcherIterator: Getting 5 (300.0 B) non-empty blocks including 5 (300.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:17 INFO Executor: Finished task 0.0 in stage 8.0 (TID 17). 2656 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 17) in 12 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+25/05/30 00:48:17 INFO DAGScheduler: ResultStage 8 (count at NativeMethodAccessorImpl.java:0) finished in 0.019 s
+25/05/30 00:48:17 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 8: Stage finished
+25/05/30 00:48:17 INFO DAGScheduler: Job 5 finished: count at NativeMethodAccessorImpl.java:0, took 0.022291 s
+25/05/30 00:48:17 INFO FileSourceStrategy: Pushed Filters: 
+25/05/30 00:48:17 INFO FileSourceStrategy: Post-Scan Filters: 
+25/05/30 00:48:17 INFO FileSourceStrategy: Output Data Schema: struct<final_inflation: double, final_policy_rate: double, inflation_volatility: double, production_ratio_formal: double, credit_access_gap: double ... 3 more fields>
+25/05/30 00:48:17 INFO CodeGenerator: Code generated in 36.864543 ms
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 199.7 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Removed broadcast_8_piece0 on midway3-0070.rcc.local:36625 in memory (size: 5.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Removed broadcast_6_piece0 on midway3-0070.rcc.local:36625 in memory (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 34.1 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on midway3-0070.rcc.local:36625 (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO SparkContext: Created broadcast 9 from collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122
+25/05/30 00:48:17 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/05/30 00:48:17 INFO DAGScheduler: Registering RDD 24 (collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122) as input to shuffle 3
+25/05/30 00:48:17 INFO DAGScheduler: Got map stage job 6 (collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122) with 5 output partitions
+25/05/30 00:48:17 INFO DAGScheduler: Final stage: ShuffleMapStage 9 (collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122)
+25/05/30 00:48:17 INFO DAGScheduler: Parents of final stage: List()
+25/05/30 00:48:17 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:17 INFO DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[24] at collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122), which has no missing parents
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 38.7 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 15.0 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on midway3-0070.rcc.local:36625 (size: 15.0 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:17 INFO DAGScheduler: Submitting 5 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[24] at collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Adding task set 9.0 with 5 tasks resource profile 0
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 18) (midway3-0070.rcc.local, executor driver, partition 0, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 19) (midway3-0070.rcc.local, executor driver, partition 1, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 2.0 in stage 9.0 (TID 20) (midway3-0070.rcc.local, executor driver, partition 2, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 3.0 in stage 9.0 (TID 21) (midway3-0070.rcc.local, executor driver, partition 3, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 4.0 in stage 9.0 (TID 22) (midway3-0070.rcc.local, executor driver, partition 4, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO Executor: Running task 1.0 in stage 9.0 (TID 19)
+25/05/30 00:48:17 INFO Executor: Running task 3.0 in stage 9.0 (TID 21)
+25/05/30 00:48:17 INFO Executor: Running task 4.0 in stage 9.0 (TID 22)
+25/05/30 00:48:17 INFO Executor: Running task 0.0 in stage 9.0 (TID 18)
+25/05/30 00:48:17 INFO Executor: Running task 2.0 in stage 9.0 (TID 20)
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 12582912-16777216, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 16777216-18235193, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 4194304-8388608, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 8388608-12582912, partition values: [empty row]
+25/05/30 00:48:17 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 0-4194304, partition values: [empty row]
+25/05/30 00:48:17 INFO CodeGenerator: Code generated in 11.795783 ms
+25/05/30 00:48:17 INFO Executor: Finished task 3.0 in stage 9.0 (TID 21). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO Executor: Finished task 1.0 in stage 9.0 (TID 19). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 3.0 in stage 9.0 (TID 21) in 78 ms on midway3-0070.rcc.local (executor driver) (1/5)
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 19) in 79 ms on midway3-0070.rcc.local (executor driver) (2/5)
+25/05/30 00:48:17 INFO Executor: Finished task 4.0 in stage 9.0 (TID 22). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 4.0 in stage 9.0 (TID 22) in 82 ms on midway3-0070.rcc.local (executor driver) (3/5)
+25/05/30 00:48:17 INFO Executor: Finished task 2.0 in stage 9.0 (TID 20). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 2.0 in stage 9.0 (TID 20) in 88 ms on midway3-0070.rcc.local (executor driver) (4/5)
+25/05/30 00:48:17 INFO Executor: Finished task 0.0 in stage 9.0 (TID 18). 1934 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 18) in 96 ms on midway3-0070.rcc.local (executor driver) (5/5)
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+25/05/30 00:48:17 INFO DAGScheduler: ShuffleMapStage 9 (collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122) finished in 0.102 s
+25/05/30 00:48:17 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:17 INFO DAGScheduler: running: Set()
+25/05/30 00:48:17 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:17 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:17 INFO CodeGenerator: Code generated in 31.781278 ms
+25/05/30 00:48:17 INFO SparkContext: Starting job: collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122
+25/05/30 00:48:17 INFO DAGScheduler: Got job 7 (collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122) with 1 output partitions
+25/05/30 00:48:17 INFO DAGScheduler: Final stage: ResultStage 11 (collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122)
+25/05/30 00:48:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 10)
+25/05/30 00:48:17 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:17 INFO DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[27] at collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122), which has no missing parents
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 32.9 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 11.4 KiB, free 2.2 GiB)
+25/05/30 00:48:17 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on midway3-0070.rcc.local:36625 (size: 11.4 KiB, free: 2.2 GiB)
+25/05/30 00:48:17 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[27] at collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks resource profile 0
+25/05/30 00:48:17 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 23) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:17 INFO Executor: Running task 0.0 in stage 11.0 (TID 23)
+25/05/30 00:48:17 INFO ShuffleBlockFetcherIterator: Getting 5 (780.0 B) non-empty blocks including 5 (780.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:17 INFO Executor: Finished task 0.0 in stage 11.0 (TID 23). 2705 bytes result sent to driver
+25/05/30 00:48:17 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 23) in 9 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+25/05/30 00:48:17 INFO DAGScheduler: ResultStage 11 (collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122) finished in 0.014 s
+25/05/30 00:48:17 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 11: Stage finished
+25/05/30 00:48:17 INFO DAGScheduler: Job 7 finished: collect at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:122, took 0.017399 s
+2. Analyzing by informality rate...
+25/05/30 00:48:18 INFO FileSourceStrategy: Pushed Filters: 
+25/05/30 00:48:18 INFO FileSourceStrategy: Post-Scan Filters: 
+25/05/30 00:48:18 INFO FileSourceStrategy: Output Data Schema: struct<informality_rate: double, converged: boolean, convergence_time: int, final_inflation: double, inflation_volatility: double ... 11 more fields>
+25/05/30 00:48:18 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 70.627032 ms
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 199.7 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 34.1 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on midway3-0070.rcc.local:36625 (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO SparkContext: Created broadcast 12 from toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163
+25/05/30 00:48:18 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/05/30 00:48:18 INFO DAGScheduler: Registering RDD 31 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) as input to shuffle 4
+25/05/30 00:48:18 INFO DAGScheduler: Got map stage job 8 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) with 5 output partitions
+25/05/30 00:48:18 INFO DAGScheduler: Final stage: ShuffleMapStage 12 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163)
+25/05/30 00:48:18 INFO DAGScheduler: Parents of final stage: List()
+25/05/30 00:48:18 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:18 INFO DAGScheduler: Submitting ShuffleMapStage 12 (MapPartitionsRDD[31] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163), which has no missing parents
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 96.9 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 33.9 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on midway3-0070.rcc.local:36625 (size: 33.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:18 INFO DAGScheduler: Submitting 5 missing tasks from ShuffleMapStage 12 (MapPartitionsRDD[31] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Adding task set 12.0 with 5 tasks resource profile 0
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 24) (midway3-0070.rcc.local, executor driver, partition 0, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 25) (midway3-0070.rcc.local, executor driver, partition 1, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 2.0 in stage 12.0 (TID 26) (midway3-0070.rcc.local, executor driver, partition 2, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 3.0 in stage 12.0 (TID 27) (midway3-0070.rcc.local, executor driver, partition 3, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 4.0 in stage 12.0 (TID 28) (midway3-0070.rcc.local, executor driver, partition 4, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO Executor: Running task 3.0 in stage 12.0 (TID 27)
+25/05/30 00:48:18 INFO Executor: Running task 4.0 in stage 12.0 (TID 28)
+25/05/30 00:48:18 INFO Executor: Running task 1.0 in stage 12.0 (TID 25)
+25/05/30 00:48:18 INFO Executor: Running task 0.0 in stage 12.0 (TID 24)
+25/05/30 00:48:18 INFO Executor: Running task 2.0 in stage 12.0 (TID 26)
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 9.536346 ms
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 7.472284 ms
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 14.006994 ms
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 4.980086 ms
+25/05/30 00:48:18 INFO BlockManagerInfo: Removed broadcast_9_piece0 on midway3-0070.rcc.local:36625 in memory (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 4194304-8388608, partition values: [empty row]
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 0-4194304, partition values: [empty row]
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 8388608-12582912, partition values: [empty row]
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 12582912-16777216, partition values: [empty row]
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 16777216-18235193, partition values: [empty row]
+25/05/30 00:48:18 INFO BlockManagerInfo: Removed broadcast_10_piece0 on midway3-0070.rcc.local:36625 in memory (size: 15.0 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Removed broadcast_11_piece0 on midway3-0070.rcc.local:36625 in memory (size: 11.4 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 13.910263 ms
+25/05/30 00:48:18 INFO Executor: Finished task 4.0 in stage 12.0 (TID 28). 2780 bytes result sent to driver
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 4.0 in stage 12.0 (TID 28) in 176 ms on midway3-0070.rcc.local (executor driver) (1/5)
+25/05/30 00:48:18 INFO Executor: Finished task 0.0 in stage 12.0 (TID 24). 2780 bytes result sent to driver
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 24) in 200 ms on midway3-0070.rcc.local (executor driver) (2/5)
+25/05/30 00:48:18 INFO Executor: Finished task 3.0 in stage 12.0 (TID 27). 2780 bytes result sent to driver
+25/05/30 00:48:18 INFO Executor: Finished task 1.0 in stage 12.0 (TID 25). 2780 bytes result sent to driver
+25/05/30 00:48:18 INFO Executor: Finished task 2.0 in stage 12.0 (TID 26). 2780 bytes result sent to driver
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 3.0 in stage 12.0 (TID 27) in 204 ms on midway3-0070.rcc.local (executor driver) (3/5)
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 25) in 205 ms on midway3-0070.rcc.local (executor driver) (4/5)
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 2.0 in stage 12.0 (TID 26) in 205 ms on midway3-0070.rcc.local (executor driver) (5/5)
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+25/05/30 00:48:18 INFO DAGScheduler: ShuffleMapStage 12 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) finished in 0.214 s
+25/05/30 00:48:18 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:18 INFO DAGScheduler: running: Set()
+25/05/30 00:48:18 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:18 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:18 INFO ShufflePartitionsUtil: For shuffle(4), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+25/05/30 00:48:18 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 26.459747 ms
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 9.069326 ms
+25/05/30 00:48:18 INFO SparkContext: Starting job: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163
+25/05/30 00:48:18 INFO DAGScheduler: Got job 9 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) with 1 output partitions
+25/05/30 00:48:18 INFO DAGScheduler: Final stage: ResultStage 14 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163)
+25/05/30 00:48:18 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 13)
+25/05/30 00:48:18 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:18 INFO DAGScheduler: Submitting ResultStage 14 (MapPartitionsRDD[36] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163), which has no missing parents
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 116.0 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 39.9 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on midway3-0070.rcc.local:36625 (size: 39.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:18 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 14 (MapPartitionsRDD[36] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Adding task set 14.0 with 1 tasks resource profile 0
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 29) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO Executor: Running task 0.0 in stage 14.0 (TID 29)
+25/05/30 00:48:18 INFO ShuffleBlockFetcherIterator: Getting 5 (2.3 KiB) non-empty blocks including 5 (2.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/05/30 00:48:18 INFO Executor: Finished task 0.0 in stage 14.0 (TID 29). 4206 bytes result sent to driver
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 29) in 28 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool 
+25/05/30 00:48:18 INFO DAGScheduler: ResultStage 14 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) finished in 0.036 s
+25/05/30 00:48:18 INFO DAGScheduler: Job 9 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Killing all running tasks in stage 14: Stage finished
+25/05/30 00:48:18 INFO DAGScheduler: Job 9 finished: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163, took 0.040976 s
+25/05/30 00:48:18 INFO DAGScheduler: Registering RDD 37 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) as input to shuffle 5
+25/05/30 00:48:18 INFO DAGScheduler: Got map stage job 10 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) with 1 output partitions
+25/05/30 00:48:18 INFO DAGScheduler: Final stage: ShuffleMapStage 16 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163)
+25/05/30 00:48:18 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 15)
+25/05/30 00:48:18 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:18 INFO DAGScheduler: Submitting ShuffleMapStage 16 (MapPartitionsRDD[37] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163), which has no missing parents
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 116.5 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 40.2 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on midway3-0070.rcc.local:36625 (size: 40.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 16 (MapPartitionsRDD[37] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Adding task set 16.0 with 1 tasks resource profile 0
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 0.0 in stage 16.0 (TID 30) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4442 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO Executor: Running task 0.0 in stage 16.0 (TID 30)
+25/05/30 00:48:18 INFO ShuffleBlockFetcherIterator: Getting 5 (2.3 KiB) non-empty blocks including 5 (2.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:18 INFO Executor: Finished task 0.0 in stage 16.0 (TID 30). 3993 bytes result sent to driver
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 0.0 in stage 16.0 (TID 30) in 26 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Removed TaskSet 16.0, whose tasks have all completed, from pool 
+25/05/30 00:48:18 INFO DAGScheduler: ShuffleMapStage 16 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) finished in 0.037 s
+25/05/30 00:48:18 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:18 INFO DAGScheduler: running: Set()
+25/05/30 00:48:18 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:18 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:18 INFO ShufflePartitionsUtil: For shuffle(5), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 6.774663 ms
+25/05/30 00:48:18 INFO SparkContext: Starting job: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163
+25/05/30 00:48:18 INFO DAGScheduler: Got job 11 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) with 1 output partitions
+25/05/30 00:48:18 INFO DAGScheduler: Final stage: ResultStage 19 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163)
+25/05/30 00:48:18 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 18)
+25/05/30 00:48:18 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:18 INFO DAGScheduler: Submitting ResultStage 19 (MapPartitionsRDD[40] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163), which has no missing parents
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 78.9 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 29.2 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Removed broadcast_14_piece0 on midway3-0070.rcc.local:36625 in memory (size: 39.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on midway3-0070.rcc.local:36625 (size: 29.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:18 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 19 (MapPartitionsRDD[40] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Adding task set 19.0 with 1 tasks resource profile 0
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 0.0 in stage 19.0 (TID 31) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO Executor: Running task 0.0 in stage 19.0 (TID 31)
+25/05/30 00:48:18 INFO BlockManagerInfo: Removed broadcast_13_piece0 on midway3-0070.rcc.local:36625 in memory (size: 33.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Removed broadcast_15_piece0 on midway3-0070.rcc.local:36625 in memory (size: 40.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO ShuffleBlockFetcherIterator: Getting 1 (1323.0 B) non-empty blocks including 1 (1323.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 5.414226 ms
+25/05/30 00:48:18 INFO Executor: Finished task 0.0 in stage 19.0 (TID 31). 5470 bytes result sent to driver
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 0.0 in stage 19.0 (TID 31) in 31 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Removed TaskSet 19.0, whose tasks have all completed, from pool 
+25/05/30 00:48:18 INFO DAGScheduler: ResultStage 19 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163) finished in 0.043 s
+25/05/30 00:48:18 INFO DAGScheduler: Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Killing all running tasks in stage 19: Stage finished
+25/05/30 00:48:18 INFO DAGScheduler: Job 11 finished: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:163, took 0.047062 s
+3. Computing correlations...
+25/05/30 00:48:18 INFO FileSourceStrategy: Pushed Filters: 
+25/05/30 00:48:18 INFO FileSourceStrategy: Post-Scan Filters: 
+25/05/30 00:48:18 INFO FileSourceStrategy: Output Data Schema: struct<informality_rate: double, final_inflation: double, final_policy_rate: double, inflation_volatility: double, policy_rate_volatility: double ... 6 more fields>
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 5.899468 ms
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 199.7 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 34.1 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on midway3-0070.rcc.local:36625 (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO SparkContext: Created broadcast 17 from toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:175
+25/05/30 00:48:18 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/05/30 00:48:18 INFO SparkContext: Starting job: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:175
+25/05/30 00:48:18 INFO DAGScheduler: Got job 12 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:175) with 5 output partitions
+25/05/30 00:48:18 INFO DAGScheduler: Final stage: ResultStage 20 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:175)
+25/05/30 00:48:18 INFO DAGScheduler: Parents of final stage: List()
+25/05/30 00:48:18 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:18 INFO DAGScheduler: Submitting ResultStage 20 (MapPartitionsRDD[44] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:175), which has no missing parents
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 18.5 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 8.3 KiB, free 2.2 GiB)
+25/05/30 00:48:18 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on midway3-0070.rcc.local:36625 (size: 8.3 KiB, free: 2.2 GiB)
+25/05/30 00:48:18 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:18 INFO DAGScheduler: Submitting 5 missing tasks from ResultStage 20 (MapPartitionsRDD[44] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:175) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Adding task set 20.0 with 5 tasks resource profile 0
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 0.0 in stage 20.0 (TID 32) (midway3-0070.rcc.local, executor driver, partition 0, PROCESS_LOCAL, 4974 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 1.0 in stage 20.0 (TID 33) (midway3-0070.rcc.local, executor driver, partition 1, PROCESS_LOCAL, 4974 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 2.0 in stage 20.0 (TID 34) (midway3-0070.rcc.local, executor driver, partition 2, PROCESS_LOCAL, 4974 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 3.0 in stage 20.0 (TID 35) (midway3-0070.rcc.local, executor driver, partition 3, PROCESS_LOCAL, 4974 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO TaskSetManager: Starting task 4.0 in stage 20.0 (TID 36) (midway3-0070.rcc.local, executor driver, partition 4, PROCESS_LOCAL, 4974 bytes) taskResourceAssignments Map()
+25/05/30 00:48:18 INFO Executor: Running task 3.0 in stage 20.0 (TID 35)
+25/05/30 00:48:18 INFO Executor: Running task 0.0 in stage 20.0 (TID 32)
+25/05/30 00:48:18 INFO Executor: Running task 4.0 in stage 20.0 (TID 36)
+25/05/30 00:48:18 INFO Executor: Running task 1.0 in stage 20.0 (TID 33)
+25/05/30 00:48:18 INFO Executor: Running task 2.0 in stage 20.0 (TID 34)
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 8388608-12582912, partition values: [empty row]
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 12582912-16777216, partition values: [empty row]
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 4194304-8388608, partition values: [empty row]
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 0-4194304, partition values: [empty row]
+25/05/30 00:48:18 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 16777216-18235193, partition values: [empty row]
+25/05/30 00:48:18 INFO CodeGenerator: Code generated in 7.276587 ms
+25/05/30 00:48:18 INFO Executor: Finished task 4.0 in stage 20.0 (TID 36). 5564 bytes result sent to driver
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 4.0 in stage 20.0 (TID 36) in 39 ms on midway3-0070.rcc.local (executor driver) (1/5)
+25/05/30 00:48:18 INFO Executor: Finished task 3.0 in stage 20.0 (TID 35). 13267 bytes result sent to driver
+25/05/30 00:48:18 INFO Executor: Finished task 0.0 in stage 20.0 (TID 32). 14748 bytes result sent to driver
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 3.0 in stage 20.0 (TID 35) in 53 ms on midway3-0070.rcc.local (executor driver) (2/5)
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 0.0 in stage 20.0 (TID 32) in 54 ms on midway3-0070.rcc.local (executor driver) (3/5)
+25/05/30 00:48:18 INFO Executor: Finished task 2.0 in stage 20.0 (TID 34). 14113 bytes result sent to driver
+25/05/30 00:48:18 INFO Executor: Finished task 1.0 in stage 20.0 (TID 33). 14246 bytes result sent to driver
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 2.0 in stage 20.0 (TID 34) in 56 ms on midway3-0070.rcc.local (executor driver) (4/5)
+25/05/30 00:48:18 INFO TaskSetManager: Finished task 1.0 in stage 20.0 (TID 33) in 57 ms on midway3-0070.rcc.local (executor driver) (5/5)
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Removed TaskSet 20.0, whose tasks have all completed, from pool 
+25/05/30 00:48:18 INFO DAGScheduler: ResultStage 20 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:175) finished in 0.063 s
+25/05/30 00:48:18 INFO DAGScheduler: Job 12 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:18 INFO TaskSchedulerImpl: Killing all running tasks in stage 20: Stage finished
+25/05/30 00:48:18 INFO DAGScheduler: Job 12 finished: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:175, took 0.065997 s
+4. Analyzing by informality regime...
+25/05/30 00:48:18 INFO FileSourceStrategy: Pushed Filters: 
+25/05/30 00:48:18 INFO FileSourceStrategy: Post-Scan Filters: 
+25/05/30 00:48:18 INFO FileSourceStrategy: Output Data Schema: struct<informality_rate: double, converged: boolean, final_inflation: double, inflation_volatility: double, production_ratio_formal: double ... 1 more field>
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 24.870145 ms
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 199.7 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_18_piece0 on midway3-0070.rcc.local:36625 in memory (size: 8.3 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_16_piece0 on midway3-0070.rcc.local:36625 in memory (size: 29.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 34.1 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on midway3-0070.rcc.local:36625 (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 19 from toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192
+25/05/30 00:48:19 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/05/30 00:48:19 INFO DAGScheduler: Registering RDD 48 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) as input to shuffle 6
+25/05/30 00:48:19 INFO DAGScheduler: Got map stage job 13 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) with 5 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ShuffleMapStage 21 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List()
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ShuffleMapStage 21 (MapPartitionsRDD[48] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 66.6 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 26.7 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on midway3-0070.rcc.local:36625 (size: 26.7 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 5 missing tasks from ShuffleMapStage 21 (MapPartitionsRDD[48] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 21.0 with 5 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 21.0 (TID 37) (midway3-0070.rcc.local, executor driver, partition 0, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 1.0 in stage 21.0 (TID 38) (midway3-0070.rcc.local, executor driver, partition 1, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 2.0 in stage 21.0 (TID 39) (midway3-0070.rcc.local, executor driver, partition 2, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 3.0 in stage 21.0 (TID 40) (midway3-0070.rcc.local, executor driver, partition 3, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 4.0 in stage 21.0 (TID 41) (midway3-0070.rcc.local, executor driver, partition 4, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 21.0 (TID 37)
+25/05/30 00:48:19 INFO Executor: Running task 3.0 in stage 21.0 (TID 40)
+25/05/30 00:48:19 INFO Executor: Running task 1.0 in stage 21.0 (TID 38)
+25/05/30 00:48:19 INFO Executor: Running task 2.0 in stage 21.0 (TID 39)
+25/05/30 00:48:19 INFO Executor: Running task 4.0 in stage 21.0 (TID 41)
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 5.597054 ms
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 3.493499 ms
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 6.011347 ms
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 3.150738 ms
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 0-4194304, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 16777216-18235193, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 8388608-12582912, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 4194304-8388608, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 12582912-16777216, partition values: [empty row]
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 4.238849 ms
+25/05/30 00:48:19 INFO Executor: Finished task 4.0 in stage 21.0 (TID 41). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 4.0 in stage 21.0 (TID 41) in 78 ms on midway3-0070.rcc.local (executor driver) (1/5)
+25/05/30 00:48:19 INFO Executor: Finished task 3.0 in stage 21.0 (TID 40). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO Executor: Finished task 1.0 in stage 21.0 (TID 38). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 21.0 (TID 37). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 3.0 in stage 21.0 (TID 40) in 89 ms on midway3-0070.rcc.local (executor driver) (2/5)
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 21.0 (TID 37) in 90 ms on midway3-0070.rcc.local (executor driver) (3/5)
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 1.0 in stage 21.0 (TID 38) in 90 ms on midway3-0070.rcc.local (executor driver) (4/5)
+25/05/30 00:48:19 INFO Executor: Finished task 2.0 in stage 21.0 (TID 39). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 2.0 in stage 21.0 (TID 39) in 100 ms on midway3-0070.rcc.local (executor driver) (5/5)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 21.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ShuffleMapStage 21 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) finished in 0.105 s
+25/05/30 00:48:19 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:19 INFO DAGScheduler: running: Set()
+25/05/30 00:48:19 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:19 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:19 INFO ShufflePartitionsUtil: For shuffle(6), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+25/05/30 00:48:19 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 14.447723 ms
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 4.417136 ms
+25/05/30 00:48:19 INFO SparkContext: Starting job: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192
+25/05/30 00:48:19 INFO DAGScheduler: Got job 14 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) with 1 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ResultStage 23 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 22)
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ResultStage 23 (MapPartitionsRDD[53] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 75.4 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 29.2 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_20_piece0 on midway3-0070.rcc.local:36625 in memory (size: 26.7 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on midway3-0070.rcc.local:36625 (size: 29.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 23 (MapPartitionsRDD[53] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 23.0 with 1 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 23.0 (TID 42) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 23.0 (TID 42)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Getting 5 (994.0 B) non-empty blocks including 5 (994.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 3.836999 ms
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 23.0 (TID 42). 4065 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 23.0 (TID 42) in 22 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 23.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ResultStage 23 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) finished in 0.034 s
+25/05/30 00:48:19 INFO DAGScheduler: Job 14 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Killing all running tasks in stage 23: Stage finished
+25/05/30 00:48:19 INFO DAGScheduler: Job 14 finished: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192, took 0.037219 s
+25/05/30 00:48:19 INFO DAGScheduler: Registering RDD 54 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) as input to shuffle 7
+25/05/30 00:48:19 INFO DAGScheduler: Got map stage job 15 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) with 1 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ShuffleMapStage 25 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 24)
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ShuffleMapStage 25 (MapPartitionsRDD[54] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 75.6 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 29.5 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on midway3-0070.rcc.local:36625 (size: 29.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 25 (MapPartitionsRDD[54] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 25.0 with 1 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 25.0 (TID 43) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4442 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 25.0 (TID 43)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Getting 5 (994.0 B) non-empty blocks including 5 (994.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 25.0 (TID 43). 3988 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 25.0 (TID 43) in 18 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 25.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ShuffleMapStage 25 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) finished in 0.025 s
+25/05/30 00:48:19 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:19 INFO DAGScheduler: running: Set()
+25/05/30 00:48:19 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:19 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:19 INFO ShufflePartitionsUtil: For shuffle(7), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+25/05/30 00:48:19 INFO SparkContext: Starting job: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192
+25/05/30 00:48:19 INFO DAGScheduler: Got job 16 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) with 1 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ResultStage 28 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 27)
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ResultStage 28 (MapPartitionsRDD[57] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 57.5 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 23.8 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on midway3-0070.rcc.local:36625 (size: 23.8 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 23 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 28 (MapPartitionsRDD[57] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 28.0 with 1 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 28.0 (TID 44) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 28.0 (TID 44)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Getting 1 (387.0 B) non-empty blocks including 1 (387.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 5.8544 ms
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 28.0 (TID 44). 4888 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 28.0 (TID 44) in 18 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 28.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ResultStage 28 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192) finished in 0.023 s
+25/05/30 00:48:19 INFO DAGScheduler: Job 16 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Killing all running tasks in stage 28: Stage finished
+25/05/30 00:48:19 INFO DAGScheduler: Job 16 finished: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:192, took 0.025594 s
+5. Analyzing convergence patterns...
+25/05/30 00:48:19 INFO FileSourceStrategy: Pushed Filters: IsNotNull(converged),EqualTo(converged,true)
+25/05/30 00:48:19 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(converged#4),converged#4
+25/05/30 00:48:19 INFO FileSourceStrategy: Output Data Schema: struct<informality_rate: double, converged: boolean, convergence_time: int ... 1 more fields>
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 20.786109 ms
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 199.7 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 34.1 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on midway3-0070.rcc.local:36625 (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 24 from toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205
+25/05/30 00:48:19 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/05/30 00:48:19 INFO DAGScheduler: Registering RDD 61 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) as input to shuffle 8
+25/05/30 00:48:19 INFO DAGScheduler: Got map stage job 17 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) with 5 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ShuffleMapStage 29 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List()
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ShuffleMapStage 29 (MapPartitionsRDD[61] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 59.7 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 24.9 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on midway3-0070.rcc.local:36625 (size: 24.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 5 missing tasks from ShuffleMapStage 29 (MapPartitionsRDD[61] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 29.0 with 5 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 29.0 (TID 45) (midway3-0070.rcc.local, executor driver, partition 0, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 1.0 in stage 29.0 (TID 46) (midway3-0070.rcc.local, executor driver, partition 1, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 2.0 in stage 29.0 (TID 47) (midway3-0070.rcc.local, executor driver, partition 2, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 3.0 in stage 29.0 (TID 48) (midway3-0070.rcc.local, executor driver, partition 3, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 4.0 in stage 29.0 (TID 49) (midway3-0070.rcc.local, executor driver, partition 4, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 29.0 (TID 45)
+25/05/30 00:48:19 INFO Executor: Running task 1.0 in stage 29.0 (TID 46)
+25/05/30 00:48:19 INFO Executor: Running task 2.0 in stage 29.0 (TID 47)
+25/05/30 00:48:19 INFO Executor: Running task 3.0 in stage 29.0 (TID 48)
+25/05/30 00:48:19 INFO Executor: Running task 4.0 in stage 29.0 (TID 49)
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 4.140381 ms
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 4.544258 ms
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 0-4194304, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 4194304-8388608, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 8388608-12582912, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 16777216-18235193, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 12582912-16777216, partition values: [empty row]
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 3.367291 ms
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 2.417726 ms
+25/05/30 00:48:19 INFO Executor: Finished task 4.0 in stage 29.0 (TID 49). 2793 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 4.0 in stage 29.0 (TID 49) in 51 ms on midway3-0070.rcc.local (executor driver) (1/5)
+25/05/30 00:48:19 INFO Executor: Finished task 3.0 in stage 29.0 (TID 48). 2793 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 3.0 in stage 29.0 (TID 48) in 62 ms on midway3-0070.rcc.local (executor driver) (2/5)
+25/05/30 00:48:19 INFO Executor: Finished task 1.0 in stage 29.0 (TID 46). 2793 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 1.0 in stage 29.0 (TID 46) in 64 ms on midway3-0070.rcc.local (executor driver) (3/5)
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 29.0 (TID 45). 2793 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 29.0 (TID 45) in 68 ms on midway3-0070.rcc.local (executor driver) (4/5)
+25/05/30 00:48:19 INFO Executor: Finished task 2.0 in stage 29.0 (TID 47). 2793 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 2.0 in stage 29.0 (TID 47) in 73 ms on midway3-0070.rcc.local (executor driver) (5/5)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 29.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ShuffleMapStage 29 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) finished in 0.080 s
+25/05/30 00:48:19 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:19 INFO DAGScheduler: running: Set()
+25/05/30 00:48:19 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:19 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:19 INFO ShufflePartitionsUtil: For shuffle(8), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+25/05/30 00:48:19 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 12.323998 ms
+25/05/30 00:48:19 INFO SparkContext: Starting job: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205
+25/05/30 00:48:19 INFO DAGScheduler: Got job 18 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) with 1 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ResultStage 31 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 30)
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ResultStage 31 (MapPartitionsRDD[66] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 68.0 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 28.3 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on midway3-0070.rcc.local:36625 (size: 28.3 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 26 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 31 (MapPartitionsRDD[66] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 31.0 with 1 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 31.0 (TID 50) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 31.0 (TID 50)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Getting 5 (936.0 B) non-empty blocks including 5 (936.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 31.0 (TID 50). 4262 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 31.0 (TID 50) in 13 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 31.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ResultStage 31 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) finished in 0.018 s
+25/05/30 00:48:19 INFO DAGScheduler: Job 18 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Killing all running tasks in stage 31: Stage finished
+25/05/30 00:48:19 INFO DAGScheduler: Job 18 finished: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205, took 0.020451 s
+25/05/30 00:48:19 INFO DAGScheduler: Registering RDD 67 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) as input to shuffle 9
+25/05/30 00:48:19 INFO DAGScheduler: Got map stage job 19 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) with 1 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ShuffleMapStage 33 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 32)
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ShuffleMapStage 33 (MapPartitionsRDD[67] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 68.5 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 28.5 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_26_piece0 on midway3-0070.rcc.local:36625 in memory (size: 28.3 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on midway3-0070.rcc.local:36625 (size: 28.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 27 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 33 (MapPartitionsRDD[67] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 33.0 with 1 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 33.0 (TID 51) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4442 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_22_piece0 on midway3-0070.rcc.local:36625 in memory (size: 29.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 33.0 (TID 51)
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_23_piece0 on midway3-0070.rcc.local:36625 in memory (size: 23.8 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_21_piece0 on midway3-0070.rcc.local:36625 in memory (size: 29.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Getting 5 (936.0 B) non-empty blocks including 5 (936.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_25_piece0 on midway3-0070.rcc.local:36625 in memory (size: 24.9 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 33.0 (TID 51). 4049 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 33.0 (TID 51) in 14 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 33.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ShuffleMapStage 33 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) finished in 0.026 s
+25/05/30 00:48:19 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:19 INFO DAGScheduler: running: Set()
+25/05/30 00:48:19 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:19 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:19 INFO ShufflePartitionsUtil: For shuffle(9), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+25/05/30 00:48:19 INFO SparkContext: Starting job: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205
+25/05/30 00:48:19 INFO DAGScheduler: Got job 20 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) with 1 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ResultStage 36 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 35)
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ResultStage 36 (MapPartitionsRDD[70] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_28 stored as values in memory (estimated size 55.2 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 24.2 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_28_piece0 in memory on midway3-0070.rcc.local:36625 (size: 24.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 28 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 36 (MapPartitionsRDD[70] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 36.0 with 1 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 36.0 (TID 52) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 36.0 (TID 52)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Getting 1 (576.0 B) non-empty blocks including 1 (576.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 36.0 (TID 52). 4846 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 36.0 (TID 52) in 9 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 36.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ResultStage 36 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205) finished in 0.015 s
+25/05/30 00:48:19 INFO DAGScheduler: Job 20 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Killing all running tasks in stage 36: Stage finished
+25/05/30 00:48:19 INFO DAGScheduler: Job 20 finished: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:205, took 0.017709 s
+6. Analyzing economic outcomes...
+25/05/30 00:48:19 INFO FileSourceStrategy: Pushed Filters: 
+25/05/30 00:48:19 INFO FileSourceStrategy: Post-Scan Filters: 
+25/05/30 00:48:19 INFO FileSourceStrategy: Output Data Schema: struct<informality_rate: double, avg_lending_rate: double, total_production: double, total_consumption: double, total_formal_loans: double ... 1 more field>
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 20.268903 ms
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_29 stored as values in memory (estimated size 199.7 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_29_piece0 stored as bytes in memory (estimated size 34.1 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_29_piece0 in memory on midway3-0070.rcc.local:36625 (size: 34.1 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 29 from toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219
+25/05/30 00:48:19 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/05/30 00:48:19 INFO DAGScheduler: Registering RDD 74 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) as input to shuffle 10
+25/05/30 00:48:19 INFO DAGScheduler: Got map stage job 21 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) with 5 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ShuffleMapStage 37 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List()
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ShuffleMapStage 37 (MapPartitionsRDD[74] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_30 stored as values in memory (estimated size 58.3 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_30_piece0 stored as bytes in memory (estimated size 23.8 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_30_piece0 in memory on midway3-0070.rcc.local:36625 (size: 23.8 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 30 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 5 missing tasks from ShuffleMapStage 37 (MapPartitionsRDD[74] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 37.0 with 5 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 37.0 (TID 53) (midway3-0070.rcc.local, executor driver, partition 0, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 1.0 in stage 37.0 (TID 54) (midway3-0070.rcc.local, executor driver, partition 1, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 2.0 in stage 37.0 (TID 55) (midway3-0070.rcc.local, executor driver, partition 2, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 3.0 in stage 37.0 (TID 56) (midway3-0070.rcc.local, executor driver, partition 3, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 4.0 in stage 37.0 (TID 57) (midway3-0070.rcc.local, executor driver, partition 4, PROCESS_LOCAL, 4963 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 2.0 in stage 37.0 (TID 55)
+25/05/30 00:48:19 INFO Executor: Running task 1.0 in stage 37.0 (TID 54)
+25/05/30 00:48:19 INFO Executor: Running task 4.0 in stage 37.0 (TID 57)
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 37.0 (TID 53)
+25/05/30 00:48:19 INFO Executor: Running task 3.0 in stage 37.0 (TID 56)
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 3.585647 ms
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 4.377052 ms
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 4194304-8388608, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 12582912-16777216, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 8388608-12582912, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 0-4194304, partition values: [empty row]
+25/05/30 00:48:19 INFO FileScanRDD: Reading File path: file:///home/gtriberti/Final_ABM/Model/Param_sweep_Midway/results/abm_sweep_results_20250530_001556.csv, range: 16777216-18235193, partition values: [empty row]
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 3.958756 ms
+25/05/30 00:48:19 INFO Executor: Finished task 4.0 in stage 37.0 (TID 57). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 4.0 in stage 37.0 (TID 57) in 53 ms on midway3-0070.rcc.local (executor driver) (1/5)
+25/05/30 00:48:19 INFO Executor: Finished task 1.0 in stage 37.0 (TID 54). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO Executor: Finished task 3.0 in stage 37.0 (TID 56). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 37.0 (TID 53). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 3.0 in stage 37.0 (TID 56) in 57 ms on midway3-0070.rcc.local (executor driver) (2/5)
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 1.0 in stage 37.0 (TID 54) in 57 ms on midway3-0070.rcc.local (executor driver) (3/5)
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 37.0 (TID 53) in 57 ms on midway3-0070.rcc.local (executor driver) (4/5)
+25/05/30 00:48:19 INFO Executor: Finished task 2.0 in stage 37.0 (TID 55). 2737 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 2.0 in stage 37.0 (TID 55) in 68 ms on midway3-0070.rcc.local (executor driver) (5/5)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 37.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ShuffleMapStage 37 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) finished in 0.072 s
+25/05/30 00:48:19 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:19 INFO DAGScheduler: running: Set()
+25/05/30 00:48:19 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:19 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:19 INFO ShufflePartitionsUtil: For shuffle(10), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+25/05/30 00:48:19 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+25/05/30 00:48:19 INFO CodeGenerator: Code generated in 11.351715 ms
+25/05/30 00:48:19 INFO SparkContext: Starting job: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219
+25/05/30 00:48:19 INFO DAGScheduler: Got job 22 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) with 1 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ResultStage 39 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 38)
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ResultStage 39 (MapPartitionsRDD[79] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_31 stored as values in memory (estimated size 67.3 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_31_piece0 stored as bytes in memory (estimated size 26.8 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_31_piece0 in memory on midway3-0070.rcc.local:36625 (size: 26.8 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 31 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 39 (MapPartitionsRDD[79] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 39.0 with 1 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 39.0 (TID 58) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 39.0 (TID 58)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Getting 5 (1512.0 B) non-empty blocks including 5 (1512.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 39.0 (TID 58). 4206 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 39.0 (TID 58) in 12 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 39.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ResultStage 39 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) finished in 0.017 s
+25/05/30 00:48:19 INFO DAGScheduler: Job 22 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Killing all running tasks in stage 39: Stage finished
+25/05/30 00:48:19 INFO DAGScheduler: Job 22 finished: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219, took 0.019431 s
+25/05/30 00:48:19 INFO DAGScheduler: Registering RDD 80 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) as input to shuffle 11
+25/05/30 00:48:19 INFO DAGScheduler: Got map stage job 23 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) with 1 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ShuffleMapStage 41 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 40)
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ShuffleMapStage 41 (MapPartitionsRDD[80] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_32 stored as values in memory (estimated size 67.8 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_32_piece0 stored as bytes in memory (estimated size 27.2 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_32_piece0 in memory on midway3-0070.rcc.local:36625 (size: 27.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 32 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 41 (MapPartitionsRDD[80] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 41.0 with 1 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 41.0 (TID 59) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4442 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 41.0 (TID 59)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Getting 5 (1512.0 B) non-empty blocks including 5 (1512.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 41.0 (TID 59). 3993 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 41.0 (TID 59) in 14 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 41.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ShuffleMapStage 41 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) finished in 0.020 s
+25/05/30 00:48:19 INFO DAGScheduler: looking for newly runnable stages
+25/05/30 00:48:19 INFO DAGScheduler: running: Set()
+25/05/30 00:48:19 INFO DAGScheduler: waiting: Set()
+25/05/30 00:48:19 INFO DAGScheduler: failed: Set()
+25/05/30 00:48:19 INFO ShufflePartitionsUtil: For shuffle(11), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+25/05/30 00:48:19 INFO SparkContext: Starting job: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219
+25/05/30 00:48:19 INFO DAGScheduler: Got job 24 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) with 1 output partitions
+25/05/30 00:48:19 INFO DAGScheduler: Final stage: ResultStage 44 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219)
+25/05/30 00:48:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 43)
+25/05/30 00:48:19 INFO DAGScheduler: Missing parents: List()
+25/05/30 00:48:19 INFO DAGScheduler: Submitting ResultStage 44 (MapPartitionsRDD[83] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219), which has no missing parents
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_33 stored as values in memory (estimated size 51.8 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_27_piece0 on midway3-0070.rcc.local:36625 in memory (size: 28.5 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO MemoryStore: Block broadcast_33_piece0 stored as bytes in memory (estimated size 22.4 KiB, free 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Added broadcast_33_piece0 in memory on midway3-0070.rcc.local:36625 (size: 22.4 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO SparkContext: Created broadcast 33 from broadcast at DAGScheduler.scala:1513
+25/05/30 00:48:19 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 44 (MapPartitionsRDD[83] at toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) (first 15 tasks are for partitions Vector(0))
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Adding task set 44.0 with 1 tasks resource profile 0
+25/05/30 00:48:19 INFO TaskSetManager: Starting task 0.0 in stage 44.0 (TID 60) (midway3-0070.rcc.local, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_30_piece0 on midway3-0070.rcc.local:36625 in memory (size: 23.8 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO Executor: Running task 0.0 in stage 44.0 (TID 60)
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_28_piece0 on midway3-0070.rcc.local:36625 in memory (size: 24.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_31_piece0 on midway3-0070.rcc.local:36625 in memory (size: 26.8 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Getting 1 (914.0 B) non-empty blocks including 1 (914.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/30 00:48:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/30 00:48:19 INFO BlockManagerInfo: Removed broadcast_32_piece0 on midway3-0070.rcc.local:36625 in memory (size: 27.2 KiB, free: 2.2 GiB)
+25/05/30 00:48:19 INFO Executor: Finished task 0.0 in stage 44.0 (TID 60). 5138 bytes result sent to driver
+25/05/30 00:48:19 INFO TaskSetManager: Finished task 0.0 in stage 44.0 (TID 60) in 9 ms on midway3-0070.rcc.local (executor driver) (1/1)
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Removed TaskSet 44.0, whose tasks have all completed, from pool 
+25/05/30 00:48:19 INFO DAGScheduler: ResultStage 44 (toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219) finished in 0.028 s
+25/05/30 00:48:19 INFO DAGScheduler: Job 24 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/30 00:48:19 INFO TaskSchedulerImpl: Killing all running tasks in stage 44: Stage finished
+25/05/30 00:48:19 INFO DAGScheduler: Job 24 finished: toPandas at /home/gtriberti/Final_ABM/Model/Param_sweep_Midway/spark_analysis.py:219, took 0.030735 s
+Analysis results saved to analysis_results/analysis_results_20250530_004819.json
+Creating visualizations...
+Creating distribution plots...
+Visualizations saved:
+  Main analysis: analysis_results/abm_analysis_main_20250530_004820.png
+  Correlation matrix: analysis_results/correlation_matrix_20250530_004820.png
+  Key metrics analysis: analysis_results/key_metrics_analysis_20250530_004820.png
+Summary report saved to: analysis_results/summary_report_20250530_004825.md
+
+Analysis completed successfully!
+Results saved to: analysis_results
+Summary report: analysis_results/summary_report_20250530_004825.md
+25/05/30 00:48:25 INFO SparkUI: Stopped Spark web UI at http://midway3-0070.rcc.local:4040
+25/05/30 00:48:25 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/05/30 00:48:25 INFO MemoryStore: MemoryStore cleared
+25/05/30 00:48:25 INFO BlockManager: BlockManager stopped
+25/05/30 00:48:25 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/05/30 00:48:25 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/05/30 00:48:25 INFO SparkContext: Successfully stopped SparkContext
+25/05/30 00:48:26 INFO ShutdownHookManager: Shutdown hook called
+25/05/30 00:48:26 INFO ShutdownHookManager: Deleting directory /tmp/spark-94fdc521-868e-431d-9a2a-1d740d971b88
+25/05/30 00:48:26 INFO ShutdownHookManager: Deleting directory /tmp/spark-94fdc521-868e-431d-9a2a-1d740d971b88/pyspark-e53b4ac2-42d7-45b7-a014-14969ecf138a
+25/05/30 00:48:26 INFO ShutdownHookManager: Deleting directory /tmp/spark-3895fb3e-5af9-4961-aa1a-31b0e1949fcd
+============================================
+Spark analysis completed at: Fri May 30 00:48:26 CDT 2025
+Exit code: 0
+SUCCESS: Spark analysis completed successfully!
+Analysis results:
+total 979
+drwxrwxr-x 2 gtriberti gtriberti    4096 May 30 00:48 .
+drwxrwxr-x 6 gtriberti gtriberti    4096 May 30 00:47 ..
+-rw-rw-r-- 1 gtriberti gtriberti 1003752 May 30 00:48 abm_analysis_main_20250530_004820.png
+-rw-rw-r-- 1 gtriberti gtriberti   15351 May 30 00:48 analysis_results_20250530_004819.json
+-rw-rw-r-- 1 gtriberti gtriberti  470831 May 30 00:48 correlation_matrix_20250530_004820.png
+-rw-rw-r-- 1 gtriberti gtriberti  300970 May 30 00:44 distributions_20250530_004420.png
+-rw-rw-r-- 1 gtriberti gtriberti  489293 May 30 00:48 key_metrics_analysis_20250530_004820.png
+-rw-rw-r-- 1 gtriberti gtriberti  673596 May 30 00:44 simple_analysis_20250530_004420.png
+-rw-rw-r-- 1 gtriberti gtriberti    3532 May 30 00:44 simple_analysis_results_20250530_004420.json
+-rw-rw-r-- 1 gtriberti gtriberti     730 May 30 00:44 summary_by_informality_20250530_004420.csv
+-rw-rw-r-- 1 gtriberti gtriberti    3126 May 30 00:48 summary_report_20250530_004825.md
+Generated files:
+  Plot: analysis_results/simple_analysis_20250530_004420.png
+  Plot: analysis_results/distributions_20250530_004420.png
+  Plot: analysis_results/correlation_matrix_20250530_004820.png
+  Plot: analysis_results/key_metrics_analysis_20250530_004820.png
+  Plot: analysis_results/abm_analysis_main_20250530_004820.png
+  Data: analysis_results/simple_analysis_results_20250530_004420.json
+  Data: analysis_results/analysis_results_20250530_004819.json
+  Report: analysis_results/summary_report_20250530_004825.md
+Total analysis results size:
+978K	analysis_results/
+============================================
+Analysis job completed!

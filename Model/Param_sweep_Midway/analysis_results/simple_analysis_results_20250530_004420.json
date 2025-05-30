@@ -1,0 +1,110 @@
+{
+  "overall_statistics": {
+    "total_simulations": 800,
+    "convergence_rate": 0.9525,
+    "avg_inflation": 0.014384673010539537,
+    "std_inflation": 0.0021938982951211815,
+    "avg_credit_gap": 0.5316316852832729,
+    "avg_formal_production_ratio": 0.7823128487824039
+  },
+  "by_informality_rate": [
+    {
+      "informality_rate": 0.1,
+      "converged_count": 100,
+      "converged_mean": 0.98,
+      "convergence_time_mean": 84.2653,
+      "final_inflation_mean": 0.0145,
+      "final_inflation_std": 0.002,
+      "inflation_volatility_mean": 0.0025,
+      "credit_access_gap_mean": 0.5298,
+      "production_ratio_formal_mean": 0.9706,
+      "formal_credit_ratio_mean": 0.9725
+    },
+    {
+      "informality_rate": 0.2,
+      "converged_count": 100,
+      "converged_mean": 0.98,
+      "convergence_time_mean": 90.5918,
+      "final_inflation_mean": 0.0145,
+      "final_inflation_std": 0.002,
+      "inflation_volatility_mean": 0.0026,
+      "credit_access_gap_mean": 0.532,
+      "production_ratio_formal_mean": 0.9352,
+      "formal_credit_ratio_mean": 0.9381
+    },
+    {
+      "informality_rate": 0.3,
+      "converged_count": 100,
+      "converged_mean": 0.96,
+      "convergence_time_mean": 97.5104,
+      "final_inflation_mean": 0.0149,
+      "final_inflation_std": 0.0019,
+      "inflation_volatility_mean": 0.0025,
+      "credit_access_gap_mean": 0.526,
+      "production_ratio_formal_mean": 0.8951,
+      "formal_credit_ratio_mean": 0.8955
+    },
+    {
+      "informality_rate": 0.4,
+      "converged_count": 100,
+      "converged_mean": 0.99,
+      "convergence_time_mean": 92.1919,
+      "final_inflation_mean": 0.0142,
+      "final_inflation_std": 0.0023,
+      "inflation_volatility_mean": 0.0026,
+      "credit_access_gap_mean": 0.5353,
+      "production_ratio_formal_mean": 0.8457,
+      "formal_credit_ratio_mean": 0.8481
+    },
+    {
+      "informality_rate": 0.5,
+      "converged_count": 100,
+      "converged_mean": 0.98,
+      "convergence_time_mean": 93.6531,
+      "final_inflation_mean": 0.0138,
+      "final_inflation_std": 0.002,
+      "inflation_volatility_mean": 0.0027,
+      "credit_access_gap_mean": 0.5349,
+      "production_ratio_formal_mean": 0.7874,
+      "formal_credit_ratio_mean": 0.7851
+    },
+    {
+      "informality_rate": 0.6,
+      "converged_count": 100,
+      "converged_mean": 0.96,
+      "convergence_time_mean": 100.9896,
+      "final_inflation_mean": 0.0142,
+      "final_inflation_std": 0.0023,
+      "inflation_volatility_mean": 0.0027,
+      "credit_access_gap_mean": 0.5341,
+      "production_ratio_formal_mean": 0.7084,
+      "formal_credit_ratio_mean": 0.7057
+    },
+    {
+      "informality_rate": 0.7000000000000001,
+      "converged_count": 100,
+      "converged_mean": 0.9,
+      "convergence_time_mean": 113.2444,
+      "final_inflation_mean": 0.0145,
+      "final_inflation_std": 0.0027,
+      "inflation_volatility_mean": 0.0026,
+      "credit_access_gap_mean": 0.5286,
+      "production_ratio_formal_mean": 0.6244,
+      "formal_credit_ratio_mean": 0.6061
+    },
+    {
+      "informality_rate": 0.8,
+      "converged_count": 100,
+      "converged_mean": 0.87,
+      "convergence_time_mean": 107.4483,
+      "final_inflation_mean": 0.0144,
+      "final_inflation_std": 0.0022,
+      "inflation_volatility_mean": 0.0026,
+      "credit_access_gap_mean": 0.5323,
+      "production_ratio_formal_mean": 0.4917,
+      "formal_credit_ratio_mean": 0.4818
+    }
+  ],
+  "timestamp": "20250530_004420",
+  "input_file": "results/abm_sweep_results_20250530_001556.csv"
+}

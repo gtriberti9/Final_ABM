@@ -1,0 +1,416 @@
+{
+  "overall": {
+    "total_simulations": 800,
+    "convergence_rate": 0.9525,
+    "avg_inflation": 0.014384673010539589,
+    "std_inflation": 0.0021938982951211815,
+    "avg_policy_rate": 0.01890128114654459,
+    "std_policy_rate": 0.002677247241878172,
+    "avg_inflation_volatility": 0.0025919304812032514,
+    "avg_credit_gap": 0.531631685283273,
+    "avg_formal_production_ratio": 0.7823128487824041
+  },
+  "by_informality": [
+    {
+      "informality_rate": 0.1,
+      "n_simulations": 100,
+      "convergence_rate": 0.98,
+      "avg_convergence_time": NaN,
+      "avg_inflation": 0.01453466687181665,
+      "std_inflation": 0.002014416992161327,
+      "avg_inflation_volatility": 0.0025292462704236806,
+      "avg_policy_effectiveness": 0.005477707362915863,
+      "avg_economic_stability": 0.010526736105909422,
+      "avg_credit_gap": 0.529802378546342,
+      "avg_formal_production_ratio": 0.9705683452310118,
+      "avg_formal_credit_ratio": 0.972483720573002,
+      "avg_production_gap": 40.38323495362089,
+      "avg_price_gap": -1.637643779451907
+    },
+    {
+      "informality_rate": 0.2,
+      "n_simulations": 100,
+      "convergence_rate": 0.98,
+      "avg_convergence_time": NaN,
+      "avg_inflation": 0.014457652621689654,
+      "std_inflation": 0.0020418725330608625,
+      "avg_inflation_volatility": 0.0025539385544100196,
+      "avg_policy_effectiveness": 0.005542347378310343,
+      "avg_economic_stability": 0.009810393125322205,
+      "avg_credit_gap": 0.5320278757727803,
+      "avg_formal_production_ratio": 0.9351811188600032,
+      "avg_formal_credit_ratio": 0.9380792868383707,
+      "avg_production_gap": 41.74573318252285,
+      "avg_price_gap": -1.596113109505197
+    },
+    {
+      "informality_rate": 0.30000000000000004,
+      "n_simulations": 100,
+      "convergence_rate": 0.96,
+      "avg_convergence_time": NaN,
+      "avg_inflation": 0.014908692989080286,
+      "std_inflation": 0.0019224592732896945,
+      "avg_inflation_volatility": 0.00247673383654936,
+      "avg_policy_effectiveness": 0.005093852885960769,
+      "avg_economic_stability": 0.008757504752570868,
+      "avg_credit_gap": 0.5259992316503349,
+      "avg_formal_production_ratio": 0.8951062898472166,
+      "avg_formal_credit_ratio": 0.8954757260432885,
+      "avg_production_gap": 46.25628884946043,
+      "avg_price_gap": -1.6015485405713021
+    },
+    {
+      "informality_rate": 0.4,
+      "n_simulations": 100,
+      "convergence_rate": 0.99,
+      "avg_convergence_time": NaN,
+      "avg_inflation": 0.01417880814611443,
+      "std_inflation": 0.0022527032465085644,
+      "avg_inflation_volatility": 0.002636795622421735,
+      "avg_policy_effectiveness": 0.0058239373789178255,
+      "avg_economic_stability": 0.009576437776073664,
+      "avg_credit_gap": 0.5352930789111874,
+      "avg_formal_production_ratio": 0.8456770889994685,
+      "avg_formal_credit_ratio": 0.8480580245413262,
+      "avg_production_gap": 43.82450888578187,
+      "avg_price_gap": -1.6334062250767047
+    },
+    {
+      "informality_rate": 0.5,
+      "n_simulations": 100,
+      "convergence_rate": 0.98,
+      "avg_convergence_time": NaN,
+      "avg_inflation": 0.013841778939806412,
+      "std_inflation": 0.0019972794886153012,
+      "avg_inflation_volatility": 0.0026639544594614737,
+      "avg_policy_effectiveness": 0.006162916239311275,
+      "avg_economic_stability": 0.009661771375164805,
+      "avg_credit_gap": 0.5348938564930221,
+      "avg_formal_production_ratio": 0.7874002719938029,
+      "avg_formal_credit_ratio": 0.7851483967299869,
+      "avg_production_gap": 45.76764608786437,
+      "avg_price_gap": -1.6216877405685326
+    },
+    {
+      "informality_rate": 0.6,
+      "n_simulations": 100,
+      "convergence_rate": 0.96,
+      "avg_convergence_time": NaN,
+      "avg_inflation": 0.014188155816986547,
+      "std_inflation": 0.0022959929379931542,
+      "avg_inflation_volatility": 0.002651469405137162,
+      "avg_policy_effectiveness": 0.005822753533518716,
+      "avg_economic_stability": 0.008148312935367273,
+      "avg_credit_gap": 0.53405238788825,
+      "avg_formal_production_ratio": 0.708441207730929,
+      "avg_formal_credit_ratio": 0.7056503084367697,
+      "avg_production_gap": 51.61898488383525,
+      "avg_price_gap": -1.5892370670729281
+    },
+    {
+      "informality_rate": 0.7000000000000001,
+      "n_simulations": 100,
+      "convergence_rate": 0.9,
+      "avg_convergence_time": NaN,
+      "avg_inflation": 0.014520228662034255,
+      "std_inflation": 0.0026646358624245288,
+      "avg_inflation_volatility": 0.002585428652202202,
+      "avg_policy_effectiveness": 0.00549556759704919,
+      "avg_economic_stability": 0.006721004263746118,
+      "avg_credit_gap": 0.528648160992894,
+      "avg_formal_production_ratio": 0.6244464262823515,
+      "avg_formal_credit_ratio": 0.6061303064281929,
+      "avg_production_gap": 58.527675169368784,
+      "avg_price_gap": -1.6155650675350948
+    },
+    {
+      "informality_rate": 0.8,
+      "n_simulations": 100,
+      "convergence_rate": 0.87,
+      "avg_convergence_time": NaN,
+      "avg_inflation": 0.014447400036788469,
+      "std_inflation": 0.0021862457515709767,
+      "avg_inflation_volatility": 0.0026378770490203757,
+      "avg_policy_effectiveness": 0.005552599963211531,
+      "avg_economic_stability": 0.006754657822793843,
+      "avg_credit_gap": 0.5323365120113721,
+      "avg_formal_production_ratio": 0.49168204131444687,
+      "avg_formal_credit_ratio": 0.4817629404416536,
+      "avg_production_gap": 61.48854351809209,
+      "avg_price_gap": -1.5770295026887349
+    }
+  ],
+  "correlations": {
+    "informality_rate": {
+      "informality_rate": 1.0,
+      "final_inflation": -0.034792868623036155,
+      "final_policy_rate": -0.19868611733328412,
+      "inflation_volatility": 0.05582834385943403,
+      "credit_access_gap": 0.02835965770971837,
+      "production_ratio_formal": -0.9047286706118035,
+      "formal_credit_ratio": -0.9258659955933467,
+      "policy_effectiveness": 0.035288115041454966,
+      "economic_stability": -0.21102763982666684
+    },
+    "final_inflation": {
+      "informality_rate": -0.034792868623036155,
+      "final_inflation": 1.0,
+      "final_policy_rate": 0.21031823717444267,
+      "inflation_volatility": -0.03170817724033576,
+      "credit_access_gap": -0.00963009794597819,
+      "production_ratio_formal": 0.02167756781408733,
+      "formal_credit_ratio": 0.019308371544560027,
+      "policy_effectiveness": -0.9994796572862729,
+      "economic_stability": -0.013459468335665702
+    },
+    "final_policy_rate": {
+      "informality_rate": -0.19868611733328412,
+      "final_inflation": 0.21031823717444267,
+      "final_policy_rate": 1.0,
+      "inflation_volatility": 0.6076850373546119,
+      "credit_access_gap": 0.21320252012553248,
+      "production_ratio_formal": 0.13417289781624417,
+      "formal_credit_ratio": 0.19246763714981907,
+      "policy_effectiveness": -0.2098911248933805,
+      "economic_stability": 0.8411053793450054
+    },
+    "inflation_volatility": {
+      "informality_rate": 0.05582834385943403,
+      "final_inflation": -0.03170817724033576,
+      "final_policy_rate": 0.6076850373546119,
+      "inflation_volatility": 1.0,
+      "credit_access_gap": 0.09372152937059454,
+      "production_ratio_formal": -0.06058934547806066,
+      "formal_credit_ratio": -0.02151925010440355,
+      "policy_effectiveness": 0.031726098786352526,
+      "economic_stability": 0.6069883172874322
+    },
+    "credit_access_gap": {
+      "informality_rate": 0.02835965770971837,
+      "final_inflation": -0.00963009794597819,
+      "final_policy_rate": 0.21320252012553248,
+      "inflation_volatility": 0.09372152937059454,
+      "credit_access_gap": 1.0,
+      "production_ratio_formal": -0.06454487916509657,
+      "formal_credit_ratio": -0.04574026699106194,
+      "policy_effectiveness": 0.009862422664636493,
+      "economic_stability": 0.23099729101228514
+    },
+    "production_ratio_formal": {
+      "informality_rate": -0.9047286706118035,
+      "final_inflation": 0.02167756781408733,
+      "final_policy_rate": 0.13417289781624417,
+      "inflation_volatility": -0.06058934547806066,
+      "credit_access_gap": -0.06454487916509657,
+      "production_ratio_formal": 1.0,
+      "formal_credit_ratio": 0.9808784852354693,
+      "policy_effectiveness": -0.022245815544439617,
+      "economic_stability": 0.14685434431547129
+    },
+    "formal_credit_ratio": {
+      "informality_rate": -0.9258659955933467,
+      "final_inflation": 0.019308371544560027,
+      "final_policy_rate": 0.19246763714981907,
+      "inflation_volatility": -0.02151925010440355,
+      "credit_access_gap": -0.04574026699106194,
+      "production_ratio_formal": 0.9808784852354693,
+      "formal_credit_ratio": 1.0,
+      "policy_effectiveness": -0.020086105509323913,
+      "economic_stability": 0.21655872710256374
+    },
+    "policy_effectiveness": {
+      "informality_rate": 0.035288115041454966,
+      "final_inflation": -0.9994796572862729,
+      "final_policy_rate": -0.2098911248933805,
+      "inflation_volatility": 0.031726098786352526,
+      "credit_access_gap": 0.009862422664636493,
+      "production_ratio_formal": -0.022245815544439617,
+      "formal_credit_ratio": -0.020086105509323913,
+      "policy_effectiveness": 1.0,
+      "economic_stability": 0.013854452152585527
+    },
+    "economic_stability": {
+      "informality_rate": -0.21102763982666684,
+      "final_inflation": -0.013459468335665702,
+      "final_policy_rate": 0.8411053793450054,
+      "inflation_volatility": 0.6069883172874322,
+      "credit_access_gap": 0.23099729101228514,
+      "production_ratio_formal": 0.14685434431547129,
+      "formal_credit_ratio": 0.21655872710256374,
+      "policy_effectiveness": 0.013854452152585527,
+      "economic_stability": 1.0
+    }
+  },
+  "by_regime": [
+    {
+      "informality_category": "High",
+      "n_simulations": 300,
+      "convergence_rate": 0.91,
+      "avg_inflation": 0.014385261505269756,
+      "avg_inflation_volatility": 0.0026249250354532464,
+      "avg_credit_gap": 0.5316790202975055,
+      "avg_formal_production_ratio": 0.6081898917759093,
+      "avg_policy_effectiveness": 0.0056236403645931465
+    },
+    {
+      "informality_category": "Low",
+      "n_simulations": 200,
+      "convergence_rate": 0.98,
+      "avg_inflation": 0.014496159746753142,
+      "avg_inflation_volatility": 0.0025415924124168503,
+      "avg_credit_gap": 0.5309151271595615,
+      "avg_formal_production_ratio": 0.9528747320455082,
+      "avg_policy_effectiveness": 0.005510027370613102
+    },
+    {
+      "informality_category": "Medium",
+      "n_simulations": 300,
+      "convergence_rate": 0.9766666666666667,
+      "avg_inflation": 0.01430976002500038,
+      "avg_inflation_volatility": 0.0025924946394775233,
+      "avg_credit_gap": 0.532062055684848,
+      "avg_formal_production_ratio": 0.8427278836134963,
+      "avg_policy_effectiveness": 0.005693568834729957
+    }
+  ],
+  "convergence": [
+    {
+      "informality_rate": 0.1,
+      "n_converged": 98,
+      "avg_convergence_time": NaN,
+      "std_convergence_time": NaN,
+      "min_convergence_time": NaN,
+      "max_convergence_time": NaN
+    },
+    {
+      "informality_rate": 0.2,
+      "n_converged": 98,
+      "avg_convergence_time": NaN,
+      "std_convergence_time": NaN,
+      "min_convergence_time": NaN,
+      "max_convergence_time": NaN
+    },
+    {
+      "informality_rate": 0.30000000000000004,
+      "n_converged": 96,
+      "avg_convergence_time": NaN,
+      "std_convergence_time": NaN,
+      "min_convergence_time": NaN,
+      "max_convergence_time": NaN
+    },
+    {
+      "informality_rate": 0.4,
+      "n_converged": 99,
+      "avg_convergence_time": NaN,
+      "std_convergence_time": NaN,
+      "min_convergence_time": NaN,
+      "max_convergence_time": NaN
+    },
+    {
+      "informality_rate": 0.5,
+      "n_converged": 98,
+      "avg_convergence_time": NaN,
+      "std_convergence_time": NaN,
+      "min_convergence_time": NaN,
+      "max_convergence_time": NaN
+    },
+    {
+      "informality_rate": 0.6,
+      "n_converged": 96,
+      "avg_convergence_time": NaN,
+      "std_convergence_time": NaN,
+      "min_convergence_time": NaN,
+      "max_convergence_time": NaN
+    },
+    {
+      "informality_rate": 0.7000000000000001,
+      "n_converged": 90,
+      "avg_convergence_time": NaN,
+      "std_convergence_time": NaN,
+      "min_convergence_time": NaN,
+      "max_convergence_time": NaN
+    },
+    {
+      "informality_rate": 0.8,
+      "n_converged": 87,
+      "avg_convergence_time": NaN,
+      "std_convergence_time": NaN,
+      "min_convergence_time": NaN,
+      "max_convergence_time": NaN
+    }
+  ],
+  "economic_outcomes": [
+    {
+      "informality_rate": 0.1,
+      "avg_total_production": 2601.0008368536132,
+      "avg_total_consumption": 8946.687676436013,
+      "avg_lending_rate": 0.039901486883994156,
+      "avg_formal_loans": 4407.713699688529,
+      "avg_informal_loans": 124.29069288765484,
+      "formal_loan_share": 0.9725748957588713
+    },
+    {
+      "informality_rate": 0.2,
+      "avg_total_production": 2467.718922538148,
+      "avg_total_consumption": 8744.350216655848,
+      "avg_lending_rate": 0.03960203383648671,
+      "avg_formal_loans": 4154.945052178263,
+      "avg_informal_loans": 274.4726338524814,
+      "formal_loan_share": 0.9380341495637003
+    },
+    {
+      "informality_rate": 0.30000000000000004,
+      "avg_total_production": 2438.6967932918255,
+      "avg_total_consumption": 8506.170336841044,
+      "avg_lending_rate": 0.03900765033021789,
+      "avg_formal_loans": 3937.537706286329,
+      "avg_informal_loans": 459.683373568223,
+      "formal_loan_share": 0.8954604816950827
+    },
+    {
+      "informality_rate": 0.4,
+      "avg_total_production": 2143.388669826443,
+      "avg_total_consumption": 8263.390191072547,
+      "avg_lending_rate": 0.03915635079766158,
+      "avg_formal_loans": 3272.04382535332,
+      "avg_informal_loans": 581.6106673804733,
+      "formal_loan_share": 0.8490755545217866
+    },
+    {
+      "informality_rate": 0.5,
+      "avg_total_production": 1964.1444884140642,
+      "avg_total_consumption": 8079.478347555976,
+      "avg_lending_rate": 0.03928968841177648,
+      "avg_formal_loans": 2801.298973123487,
+      "avg_informal_loans": 760.8330802085366,
+      "formal_loan_share": 0.7864107593942644
+    },
+    {
+      "informality_rate": 0.6,
+      "avg_total_production": 1820.7430474694827,
+      "avg_total_consumption": 7845.66713564946,
+      "avg_lending_rate": 0.03861006279517242,
+      "avg_formal_loans": 2447.9301858265185,
+      "avg_informal_loans": 993.3945580077412,
+      "formal_loan_share": 0.7113336775939025
+    },
+    {
+      "informality_rate": 0.7000000000000001,
+      "avg_total_production": 1778.666453430152,
+      "avg_total_consumption": 7604.862743027687,
+      "avg_lending_rate": 0.037998017756523124,
+      "avg_formal_loans": 2133.075855528042,
+      "avg_informal_loans": 1318.3564531185996,
+      "formal_loan_share": 0.6180262756955106
+    },
+    {
+      "informality_rate": 0.8,
+      "avg_total_production": 1526.254021191632,
+      "avg_total_consumption": 7388.341358983939,
+      "avg_lending_rate": 0.038023827579874034,
+      "avg_formal_loans": 1521.3741739706786,
+      "avg_informal_loans": 1483.879003436709,
+      "formal_loan_share": 0.5062382715066815
+    }
+  ]
+}

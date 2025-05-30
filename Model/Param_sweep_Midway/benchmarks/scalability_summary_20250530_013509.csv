@@ -1,0 +1,10 @@
+Metric,Value,Details
+Compute Performance,,
+Best Throughput,27.7 sims/sec,20 cores
+Best Efficiency,100.0%,1 cores
+Max Speedup Tested,15.28x,20 cores
+,,
+Storage Performance,,
+Fastest Write,Pickle,0.02s
+Fastest Read,Pickle,0.02s
+Most Compact,Parquet,45.4MB
